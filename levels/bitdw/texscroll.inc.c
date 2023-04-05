@@ -31,16 +31,16 @@ void scroll_bitdw_dl_Cylinder_mesh_layer_5_vtx_0() {
 	currentX += deltaX;	currentY += deltaY;	timeY += 1;
 }
 
-void scroll_sts_mat_bitdw_dl_weird_lava_001_layer5() {
-	Gfx *mat = segmented_to_virtual(mat_bitdw_dl_weird_lava_001_layer5);
+void scroll_sts_mat_bitdw_dl_weird_lava_002_layer5() {
+	Gfx *mat = segmented_to_virtual(mat_bitdw_dl_weird_lava_002_layer5);
 	shift_s(mat, 10, PACK_TILESIZE(0, 1));
 	shift_t(mat, 10, PACK_TILESIZE(0, 2));
 	shift_s(mat, 15, PACK_TILESIZE(0, 2));
 	shift_t(mat, 15, PACK_TILESIZE(0, 1));
 };
 
-void scroll_sts_mat_bitdw_dl_sick_looking_rock_layer1() {
-	Gfx *mat = segmented_to_virtual(mat_bitdw_dl_sick_looking_rock_layer1);
+void scroll_sts_mat_bitdw_dl_sick_looking_rock_001_layer1() {
+	Gfx *mat = segmented_to_virtual(mat_bitdw_dl_sick_looking_rock_001_layer1);
 	shift_t(mat, 11, PACK_TILESIZE(0, 1));
 };
 
@@ -654,7 +654,7 @@ void scroll_bitdw_dl_Torus_015_mesh_layer_1_vtx_0() {
 
 void scroll_bitdw_dl_TOWER_mesh_layer_5_vtx_0() {
 	int i = 0;
-	int count = 209;
+	int count = 195;
 	int width = 32 * 0x20;
 	int height = 32 * 0x20;
 
@@ -685,8 +685,8 @@ void scroll_bitdw_dl_TOWER_mesh_layer_5_vtx_0() {
 	currentX += deltaX;	currentY += deltaY;	timeY += 1;
 }
 
-void scroll_sts_mat_bitdw_dl_green_001_layer5() {
-	Gfx *mat = segmented_to_virtual(mat_bitdw_dl_green_001_layer5);
+void scroll_sts_mat_bitdw_dl_green_002_layer5() {
+	Gfx *mat = segmented_to_virtual(mat_bitdw_dl_green_002_layer5);
 	shift_s(mat, 10, PACK_TILESIZE(0, 1));
 	shift_t(mat, 10, PACK_TILESIZE(0, 1));
 	shift_s_down(mat, 15, PACK_TILESIZE(0, 1));
@@ -899,8 +899,8 @@ void scroll_bitdw_dl_walljumps_mesh_layer_5_vtx_0() {
 
 void scroll_bitdw() {
 	scroll_bitdw_dl_Cylinder_mesh_layer_5_vtx_0();
-	scroll_sts_mat_bitdw_dl_weird_lava_001_layer5();
-	scroll_sts_mat_bitdw_dl_sick_looking_rock_layer1();
+	scroll_sts_mat_bitdw_dl_weird_lava_002_layer5();
+	scroll_sts_mat_bitdw_dl_sick_looking_rock_001_layer1();
 	scroll_bitdw_dl_final_ring_inner_mesh_layer_1_vtx_0();
 	scroll_bitdw_dl_final_ring_outer_mesh_layer_5_vtx_0();
 	scroll_bitdw_dl_final_warp_mesh_layer_1_vtx_0();
@@ -927,7 +927,7 @@ void scroll_bitdw() {
 	scroll_bitdw_dl_area_2_torus_001_mesh_layer_1_vtx_0();
 	scroll_bitdw_dl_Torus_015_mesh_layer_1_vtx_0();
 	scroll_bitdw_dl_TOWER_mesh_layer_5_vtx_0();
-	scroll_sts_mat_bitdw_dl_green_001_layer5();
+	scroll_sts_mat_bitdw_dl_green_002_layer5();
 	scroll_bitdw_dl_TOWER_002_mesh_layer_5_vtx_0();
 	scroll_bitdw_dl_TOWER_003_mesh_layer_5_vtx_0();
 	scroll_bitdw_dl_TOWERLOD_mesh_layer_5_vtx_0();

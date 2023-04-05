@@ -6,7 +6,7 @@ Lights1 bitdw_dl_f3d_material_008_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
-Lights1 bitdw_dl_rainbow_001_lights = gdSPDefLights1(
+Lights1 bitdw_dl_rainbow_002_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
@@ -9524,7 +9524,7 @@ Gfx bitdw_dl_Torus_023_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx bitdw_dl_Torus_023_mesh_layer_1_vtx_1[120] = {
+Vtx bitdw_dl_Torus_023_mesh_layer_1_vtx_1[127] = {
 	{{ {58, -262, 1990}, 0, {849, 3699}, {99, 80, 0, 255} }},
 	{{ {30, -262, 1924}, 0, {755, 3471}, {70, 80, 186, 255} }},
 	{{ {-36, -262, 1897}, 0, {527, 3376}, {0, 80, 157, 255} }},
@@ -9613,12 +9613,19 @@ Vtx bitdw_dl_Torus_023_mesh_layer_1_vtx_1[120] = {
 	{{ {-1448, 257, -1050}, 0, {-2384, -3174}, {210, 176, 87, 255} }},
 	{{ {-1298, 257, -1035}, 0, {-2236, -3068}, {28, 176, 95, 255} }},
 	{{ {-1543, 257, -1166}, 0, {-2414, -3354}, {161, 176, 28, 255} }},
+	{{ {-1167, 257, -1280}, 0, {260, -321}, {95, 176, 228, 255} }},
+	{{ {-1167, 1052, -1280}, 0, {260, 1313}, {95, 80, 228, 255} }},
+	{{ {-1182, 1052, -1131}, 0, {732, 1313}, {87, 80, 46, 255} }},
+	{{ {-1182, 257, -1131}, 0, {732, -321}, {87, 176, 46, 255} }},
 	{{ {113, 334, -1485}, 0, {1088, -3853}, {90, 176, 215, 255} }},
 	{{ {118, 334, -1330}, 0, {1097, -3589}, {93, 176, 35, 255} }},
 	{{ {12, 334, -1216}, 0, {917, -3396}, {41, 176, 90, 255} }},
 	{{ {-257, 334, -1317}, 0, {460, -3568}, {166, 176, 41, 255} }},
+	{{ {12, 334, -1216}, 0, {917, -3396}, {41, 176, 90, 255} }},
 	{{ {-144, 334, -1211}, 0, {653, -3388}, {221, 176, 93, 255} }},
+	{{ {-257, 334, -1317}, 0, {460, -3568}, {166, 176, 41, 255} }},
 	{{ {-156, 334, -1586}, 0, {632, -4024}, {215, 176, 166, 255} }},
+	{{ {113, 334, -1485}, 0, {1088, -3853}, {90, 176, 215, 255} }},
 	{{ {-262, 334, -1473}, 0, {452, -3832}, {163, 176, 221, 255} }},
 	{{ {-1, 334, -1591}, 0, {896, -4033}, {35, 176, 163, 255} }},
 	{{ {-144, 788, -1211}, 0, {818, -4134}, {221, 80, 93, 255} }},
@@ -9685,22 +9692,23 @@ Gfx bitdw_dl_Torus_023_mesh_layer_1_tri_1[] = {
 	gsSP2Triangles(18, 20, 19, 0, 19, 21, 16, 0),
 	gsSP2Triangles(19, 22, 21, 0, 21, 23, 16, 0),
 	gsSP2Triangles(24, 25, 26, 0, 24, 26, 27, 0),
-	gsSP2Triangles(26, 28, 27, 0, 27, 29, 24, 0),
-	gsSP2Triangles(27, 30, 29, 0, 29, 31, 24, 0),
-	gsSPVertex(bitdw_dl_Torus_023_mesh_layer_1_vtx_1 + 96, 24, 0),
-	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
-	gsSP2Triangles(2, 4, 3, 0, 3, 5, 0, 0),
-	gsSP2Triangles(3, 6, 5, 0, 5, 7, 0, 0),
-	gsSP2Triangles(8, 9, 10, 0, 8, 10, 11, 0),
-	gsSP2Triangles(10, 12, 11, 0, 11, 13, 8, 0),
-	gsSP2Triangles(11, 14, 13, 0, 13, 15, 8, 0),
-	gsSP2Triangles(16, 17, 18, 0, 16, 18, 19, 0),
-	gsSP2Triangles(18, 20, 19, 0, 19, 21, 16, 0),
-	gsSP2Triangles(19, 22, 21, 0, 21, 23, 16, 0),
+	gsSP2Triangles(28, 29, 30, 0, 28, 30, 31, 0),
+	gsSPVertex(bitdw_dl_Torus_023_mesh_layer_1_vtx_1 + 96, 31, 0),
+	gsSP2Triangles(0, 1, 2, 0, 2, 3, 4, 0),
+	gsSP2Triangles(2, 5, 3, 0, 3, 6, 4, 0),
+	gsSP2Triangles(7, 8, 9, 0, 7, 9, 10, 0),
+	gsSP2Triangles(9, 11, 10, 0, 10, 12, 7, 0),
+	gsSP2Triangles(10, 13, 12, 0, 12, 14, 7, 0),
+	gsSP2Triangles(15, 16, 17, 0, 15, 17, 18, 0),
+	gsSP2Triangles(17, 19, 18, 0, 18, 20, 15, 0),
+	gsSP2Triangles(18, 21, 20, 0, 20, 22, 15, 0),
+	gsSP2Triangles(23, 24, 25, 0, 23, 25, 26, 0),
+	gsSP2Triangles(25, 27, 26, 0, 26, 28, 23, 0),
+	gsSP2Triangles(26, 29, 28, 0, 28, 30, 23, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx bitdw_dl_Torus_023_mesh_layer_1_vtx_2[256] = {
+Vtx bitdw_dl_Torus_023_mesh_layer_1_vtx_2[252] = {
 	{{ {485, -431, 2584}, 0, {536, -321}, {0, 176, 157, 255} }},
 	{{ {485, -262, 2584}, 0, {536, 1313}, {0, 80, 157, 255} }},
 	{{ {587, -262, 2627}, 0, {1480, 1313}, {70, 80, 186, 255} }},
@@ -9881,10 +9889,6 @@ Vtx bitdw_dl_Torus_023_mesh_layer_1_vtx_2[256] = {
 	{{ {-1182, 1052, -1131}, 0, {536, 1313}, {87, 80, 46, 255} }},
 	{{ {-1298, 1052, -1035}, 0, {1480, 1313}, {28, 80, 95, 255} }},
 	{{ {-1298, 257, -1035}, 0, {1480, -321}, {28, 176, 95, 255} }},
-	{{ {-1167, 257, -1280}, 0, {536, -321}, {95, 176, 228, 255} }},
-	{{ {-1167, 1052, -1280}, 0, {536, 1313}, {95, 80, 228, 255} }},
-	{{ {-1182, 1052, -1131}, 0, {1480, 1313}, {87, 80, 46, 255} }},
-	{{ {-1182, 257, -1131}, 0, {1480, -321}, {87, 176, 46, 255} }},
 	{{ {-1263, 257, -1396}, 0, {536, -321}, {46, 176, 169, 255} }},
 	{{ {-1263, 1052, -1396}, 0, {536, 1313}, {46, 80, 169, 255} }},
 	{{ {-1167, 1052, -1280}, 0, {1480, 1313}, {95, 80, 228, 255} }},
@@ -10023,7 +10027,7 @@ Gfx bitdw_dl_Torus_023_mesh_layer_1_tri_2[] = {
 	gsSP2Triangles(20, 21, 22, 0, 20, 22, 23, 0),
 	gsSP2Triangles(24, 25, 26, 0, 24, 26, 27, 0),
 	gsSP2Triangles(28, 29, 30, 0, 28, 30, 31, 0),
-	gsSPVertex(bitdw_dl_Torus_023_mesh_layer_1_vtx_2 + 224, 32, 0),
+	gsSPVertex(bitdw_dl_Torus_023_mesh_layer_1_vtx_2 + 224, 28, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
 	gsSP2Triangles(8, 9, 10, 0, 8, 10, 11, 0),
@@ -10031,7 +10035,6 @@ Gfx bitdw_dl_Torus_023_mesh_layer_1_tri_2[] = {
 	gsSP2Triangles(16, 17, 18, 0, 16, 18, 19, 0),
 	gsSP2Triangles(20, 21, 22, 0, 20, 22, 23, 0),
 	gsSP2Triangles(24, 25, 26, 0, 24, 26, 27, 0),
-	gsSP2Triangles(28, 29, 30, 0, 28, 30, 31, 0),
 	gsSPEndDisplayList(),
 };
 
@@ -12519,7 +12522,7 @@ Vtx bitdw_dl_TOWER_mesh_layer_5_vtx_cull[8] = {
 	{{ {1165, -3094, -1328}, 0, {-16, -16}, {0, 0, 0, 0} }},
 };
 
-Vtx bitdw_dl_TOWER_mesh_layer_5_vtx_0[209] = {
+Vtx bitdw_dl_TOWER_mesh_layer_5_vtx_0[195] = {
 	{{ {-79, 253, -176}, 0, {372, 346}, {255, 255, 255, 255} }},
 	{{ {-80, 254, -173}, 0, {372, 348}, {255, 255, 255, 255} }},
 	{{ {-80, 839, -173}, 0, {372, 348}, {255, 255, 255, 255} }},
@@ -12611,14 +12614,15 @@ Vtx bitdw_dl_TOWER_mesh_layer_5_vtx_0[209] = {
 	{{ {-58, 1803, 582}, 0, {546, 736}, {255, 255, 255, 255} }},
 	{{ {-863, 1803, 915}, 0, {199, 1083}, {255, 255, 255, 255} }},
 	{{ {-58, 839, 582}, 0, {546, 736}, {255, 255, 255, 255} }},
-	{{ {-16, -411, 599}, 0, {571, 736}, {255, 255, 255, 255} }},
-	{{ {-16, -829, 599}, 0, {571, 736}, {255, 255, 255, 255} }},
+	{{ {346, 839, 749}, 0, {792, 736}, {255, 255, 255, 255} }},
+	{{ {346, -407, 749}, 0, {792, 736}, {255, 255, 255, 255} }},
+	{{ {346, -3094, 749}, 0, {792, 736}, {255, 255, 255, 255} }},
 	{{ {-58, -3094, 582}, 0, {546, 736}, {255, 255, 255, 255} }},
 	{{ {-105, -3094, 178}, 0, {434, 536}, {255, 255, 255, 255} }},
 	{{ {-104, 254, 174}, 0, {434, 534}, {255, 255, 255, 255} }},
+	{{ {-105, -3094, 178}, 0, {434, 536}, {255, 255, 255, 255} }},
 	{{ {27, -3094, -142}, 0, {434, 342}, {255, 255, 255, 255} }},
 	{{ {22, 254, -131}, 0, {434, 348}, {255, 255, 255, 255} }},
-	{{ {-104, 254, 174}, 0, {434, 534}, {255, 255, 255, 255} }},
 	{{ {22, 844, -131}, 0, {434, 348}, {255, 255, 255, 255} }},
 	{{ {27, 1803, -142}, 0, {434, 342}, {255, 255, 255, 255} }},
 	{{ {346, 1803, -274}, 0, {572, 204}, {255, 255, 255, 255} }},
@@ -12647,25 +12651,19 @@ Vtx bitdw_dl_TOWER_mesh_layer_5_vtx_0[209] = {
 	{{ {-58, 839, 582}, 0, {546, 736}, {255, 255, 255, 255} }},
 	{{ {-863, 1803, 915}, 0, {199, 1083}, {255, 255, 255, 255} }},
 	{{ {346, 839, 749}, 0, {792, 736}, {255, 255, 255, 255} }},
-	{{ {346, -407, 749}, 0, {792, 736}, {255, 255, 255, 255} }},
-	{{ {-58, 839, 582}, 0, {546, 736}, {255, 255, 255, 255} }},
-	{{ {-16, -411, 599}, 0, {571, 736}, {255, 255, 255, 255} }},
-	{{ {346, -407, 749}, 0, {792, 736}, {255, 255, 255, 255} }},
-	{{ {294, -411, 728}, 0, {760, 736}, {255, 255, 255, 255} }},
-	{{ {346, -3094, 749}, 0, {792, 736}, {255, 255, 255, 255} }},
-	{{ {294, -829, 728}, 0, {760, 736}, {255, 255, 255, 255} }},
-	{{ {-16, -829, 599}, 0, {571, 736}, {255, 255, 255, 255} }},
-	{{ {-58, -3094, 582}, 0, {546, 736}, {255, 255, 255, 255} }},
-	{{ {27, -3094, 497}, 0, {572, 674}, {255, 255, 255, 255} }},
-	{{ {-105, -3094, 178}, 0, {434, 536}, {255, 255, 255, 255} }},
-	{{ {-105, 1803, 178}, 0, {434, 536}, {255, 255, 255, 255} }},
-	{{ {-104, 254, 174}, 0, {434, 534}, {255, 255, 255, 255} }},
-	{{ {-104, 844, 174}, 0, {434, 534}, {255, 255, 255, 255} }},
-	{{ {22, 844, -131}, 0, {434, 348}, {255, 255, 255, 255} }},
-	{{ {27, 1803, -142}, 0, {434, 342}, {255, 255, 255, 255} }},
+	{{ {751, 1803, 582}, 0, {966, 562}, {255, 255, 255, 255} }},
+	{{ {346, 1803, 749}, 0, {792, 736}, {255, 255, 255, 255} }},
+	{{ {346, 839, 749}, 0, {792, 736}, {255, 255, 255, 255} }},
+	{{ {751, 839, 582}, 0, {966, 562}, {255, 255, 255, 255} }},
+	{{ {918, 1803, 178}, 0, {966, 316}, {255, 255, 255, 255} }},
+	{{ {918, 839, 178}, 0, {966, 316}, {255, 255, 255, 255} }},
+	{{ {751, 2083, 582}, 0, {966, 562}, {255, 255, 255, 255} }},
+	{{ {346, 2083, 749}, 0, {792, 736}, {255, 255, 255, 255} }},
+	{{ {-58, 2083, 582}, 0, {546, 736}, {255, 255, 255, 255} }},
 	{{ {346, 1803, -274}, 0, {572, 204}, {255, 255, 255, 255} }},
-	{{ {798, 1803, 178}, 0, {904, 342}, {255, 255, 255, 255} }},
 	{{ {666, 1803, -142}, 0, {766, 204}, {255, 255, 255, 255} }},
+	{{ {798, 1803, 178}, 0, {904, 342}, {255, 255, 255, 255} }},
+	{{ {-105, 1803, 178}, 0, {434, 536}, {255, 255, 255, 255} }},
 	{{ {346, 1803, 629}, 0, {766, 674}, {255, 255, 255, 255} }},
 	{{ {666, 1803, 497}, 0, {904, 536}, {255, 255, 255, 255} }},
 	{{ {798, -3094, 178}, 0, {904, 342}, {255, 255, 255, 255} }},
@@ -12675,42 +12673,31 @@ Vtx bitdw_dl_TOWER_mesh_layer_5_vtx_0[209] = {
 	{{ {918, -2696, 178}, 0, {966, 316}, {255, 255, 255, 255} }},
 	{{ {918, -1801, 178}, 0, {966, 316}, {255, 255, 255, 255} }},
 	{{ {751, -2696, 582}, 0, {966, 562}, {255, 255, 255, 255} }},
+	{{ {346, -407, 749}, 0, {792, 736}, {255, 255, 255, 255} }},
 	{{ {751, -1801, 582}, 0, {966, 562}, {255, 255, 255, 255} }},
 	{{ {751, -407, 582}, 0, {966, 562}, {255, 255, 255, 255} }},
 	{{ {918, -407, 178}, 0, {966, 316}, {255, 255, 255, 255} }},
 	{{ {1165, -407, 280}, 0, {1117, 316}, {255, 255, 255, 255} }},
 	{{ {1165, 839, 280}, 0, {1117, 316}, {255, 255, 255, 255} }},
-	{{ {918, -407, 178}, 0, {966, 316}, {255, 255, 255, 255} }},
-	{{ {918, 839, 178}, 0, {966, 316}, {255, 255, 255, 255} }},
-	{{ {1165, 839, 280}, 0, {1117, 316}, {255, 255, 255, 255} }},
 	{{ {998, -407, 684}, 0, {1117, 562}, {255, 255, 255, 255} }},
-	{{ {1165, -407, 280}, 0, {1117, 316}, {255, 255, 255, 255} }},
 	{{ {998, 839, 684}, 0, {1117, 562}, {255, 255, 255, 255} }},
-	{{ {751, 839, 582}, 0, {966, 562}, {255, 255, 255, 255} }},
-	{{ {751, -407, 582}, 0, {966, 562}, {255, 255, 255, 255} }},
-	{{ {346, 1803, 749}, 0, {792, 736}, {255, 255, 255, 255} }},
-	{{ {346, 2083, 749}, 0, {792, 736}, {255, 255, 255, 255} }},
-	{{ {-58, 2083, 582}, 0, {546, 736}, {255, 255, 255, 255} }},
-	{{ {751, 1803, 582}, 0, {966, 562}, {255, 255, 255, 255} }},
-	{{ {346, 839, 749}, 0, {792, 736}, {255, 255, 255, 255} }},
-	{{ {918, 1803, 178}, 0, {966, 316}, {255, 255, 255, 255} }},
-	{{ {751, 2083, 582}, 0, {966, 562}, {255, 255, 255, 255} }},
+	{{ {27, 1803, -142}, 0, {434, 342}, {255, 255, 255, 255} }},
+	{{ {22, 844, -131}, 0, {434, 348}, {255, 255, 255, 255} }},
+	{{ {22, 844, -131}, 0, {434, 348}, {255, 255, 255, 255} }},
+	{{ {-105, 1803, 178}, 0, {434, 536}, {255, 255, 255, 255} }},
+	{{ {-104, 844, 174}, 0, {434, 534}, {255, 255, 255, 255} }},
+	{{ {-104, 254, 174}, 0, {434, 534}, {255, 255, 255, 255} }},
+	{{ {-105, -3094, 178}, 0, {434, 536}, {255, 255, 255, 255} }},
+	{{ {27, 1803, 497}, 0, {572, 674}, {255, 255, 255, 255} }},
 	{{ {346, 1803, 629}, 0, {766, 674}, {255, 255, 255, 255} }},
-	{{ {666, 1803, 497}, 0, {904, 536}, {255, 255, 255, 255} }},
-	{{ {666, -3094, 497}, 0, {904, 536}, {255, 255, 255, 255} }},
 	{{ {346, -3094, 629}, 0, {766, 674}, {255, 255, 255, 255} }},
+	{{ {666, -3094, 497}, 0, {904, 536}, {255, 255, 255, 255} }},
+	{{ {666, 1803, 497}, 0, {904, 536}, {255, 255, 255, 255} }},
 	{{ {751, -3094, 582}, 0, {966, 562}, {255, 255, 255, 255} }},
 	{{ {346, -3094, 749}, 0, {792, 736}, {255, 255, 255, 255} }},
 	{{ {346, -407, 749}, 0, {792, 736}, {255, 255, 255, 255} }},
 	{{ {27, -3094, 497}, 0, {572, 674}, {255, 255, 255, 255} }},
-	{{ {26, -829, 497}, 0, {572, 674}, {255, 255, 255, 255} }},
-	{{ {26, -829, 496}, 0, {571, 673}, {255, 255, 255, 255} }},
-	{{ {-105, 1803, 178}, 0, {434, 536}, {255, 255, 255, 255} }},
-	{{ {26, -411, 496}, 0, {571, 673}, {255, 255, 255, 255} }},
-	{{ {27, -411, 497}, 0, {572, 674}, {255, 255, 255, 255} }},
-	{{ {27, 1803, 497}, 0, {572, 674}, {255, 255, 255, 255} }},
-	{{ {336, -411, 625}, 0, {760, 674}, {255, 255, 255, 255} }},
-	{{ {322, -840, 619}, 0, {752, 674}, {255, 255, 255, 255} }},
+	{{ {-58, -3094, 582}, 0, {546, 736}, {255, 255, 255, 255} }},
 	{{ {-210, 185, 142}, 0, {372, 540}, {255, 255, 255, 255} }},
 	{{ {-410, 185, -313}, 0, {170, 346}, {255, 255, 255, 255} }},
 	{{ {-79, 185, -176}, 0, {372, 346}, {255, 255, 255, 255} }},
@@ -12726,6 +12713,8 @@ Vtx bitdw_dl_TOWER_mesh_layer_5_vtx_0[209] = {
 	{{ {-835, 185, -1239}, 0, {-250, -43}, {255, 255, 255, 255} }},
 	{{ {-675, 185, -935}, 0, {-102, 81}, {255, 255, 255, 255} }},
 	{{ {-652, 185, -1317}, 0, {-172, -123}, {255, 255, 255, 255} }},
+	{{ {-636, 185, -974}, 0, {-90, 52}, {255, 255, 255, 255} }},
+	{{ {-418, 185, -1328}, 0, {-52, -179}, {255, 255, 255, 255} }},
 	{{ {-636, 185, -974}, 0, {-90, 52}, {255, 255, 255, 255} }},
 	{{ {-418, 185, -1328}, 0, {-52, -179}, {255, 255, 255, 255} }},
 	{{ {-402, 185, -984}, 0, {30, -4}, {255, 255, 255, 255} }},
@@ -12781,73 +12770,67 @@ Gfx bitdw_dl_TOWER_mesh_layer_5_tri_0[] = {
 	gsSP2Triangles(24, 2, 1, 0, 24, 1, 25, 0),
 	gsSP2Triangles(25, 1, 3, 0, 25, 3, 4, 0),
 	gsSP2Triangles(26, 25, 4, 0, 4, 5, 26, 0),
-	gsSP2Triangles(26, 5, 27, 0, 28, 27, 5, 0),
-	gsSP2Triangles(28, 5, 29, 0, 5, 6, 29, 0),
-	gsSP2Triangles(30, 29, 6, 0, 8, 30, 6, 0),
-	gsSP1Triangle(31, 30, 8, 0),
+	gsSP2Triangles(27, 26, 5, 0, 27, 5, 28, 0),
+	gsSP2Triangles(5, 29, 28, 0, 5, 30, 29, 0),
+	gsSP2Triangles(5, 6, 30, 0, 31, 30, 6, 0),
+	gsSP1Triangle(8, 31, 6, 0),
 	gsSPVertex(bitdw_dl_TOWER_mesh_layer_5_vtx_0 + 96, 32, 0),
-	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
-	gsSP2Triangles(0, 4, 3, 0, 5, 4, 0, 0),
-	gsSP2Triangles(5, 0, 6, 0, 7, 5, 6, 0),
-	gsSP2Triangles(7, 6, 8, 0, 9, 7, 8, 0),
-	gsSP2Triangles(9, 8, 10, 0, 10, 8, 11, 0),
-	gsSP2Triangles(10, 11, 12, 0, 13, 12, 11, 0),
-	gsSP2Triangles(11, 14, 13, 0, 11, 15, 14, 0),
-	gsSP2Triangles(16, 14, 15, 0, 16, 17, 14, 0),
-	gsSP2Triangles(18, 17, 16, 0, 18, 19, 17, 0),
-	gsSP2Triangles(18, 20, 19, 0, 18, 21, 20, 0),
-	gsSP2Triangles(19, 20, 22, 0, 23, 22, 20, 0),
-	gsSP2Triangles(24, 23, 20, 0, 24, 25, 23, 0),
-	gsSP2Triangles(26, 25, 24, 0, 27, 25, 26, 0),
-	gsSP2Triangles(27, 26, 28, 0, 28, 26, 29, 0),
-	gsSP2Triangles(27, 28, 30, 0, 31, 30, 28, 0),
+	gsSP2Triangles(0, 1, 2, 0, 2, 3, 0, 0),
+	gsSP2Triangles(2, 4, 3, 0, 2, 5, 4, 0),
+	gsSP2Triangles(6, 5, 2, 0, 6, 2, 7, 0),
+	gsSP2Triangles(8, 6, 7, 0, 8, 7, 9, 0),
+	gsSP2Triangles(10, 8, 9, 0, 10, 9, 11, 0),
+	gsSP2Triangles(11, 9, 12, 0, 11, 12, 13, 0),
+	gsSP2Triangles(14, 13, 12, 0, 12, 15, 14, 0),
+	gsSP2Triangles(12, 16, 15, 0, 17, 15, 16, 0),
+	gsSP2Triangles(17, 18, 15, 0, 19, 18, 17, 0),
+	gsSP2Triangles(19, 20, 18, 0, 19, 21, 20, 0),
+	gsSP2Triangles(19, 22, 21, 0, 20, 21, 23, 0),
+	gsSP2Triangles(24, 23, 21, 0, 25, 24, 21, 0),
+	gsSP2Triangles(25, 26, 24, 0, 27, 26, 25, 0),
+	gsSP2Triangles(28, 26, 27, 0, 28, 27, 29, 0),
+	gsSP2Triangles(29, 27, 30, 0, 28, 29, 31, 0),
 	gsSPVertex(bitdw_dl_TOWER_mesh_layer_5_vtx_0 + 128, 32, 0),
-	gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
-	gsSP2Triangles(4, 2, 3, 0, 4, 3, 5, 0),
-	gsSP2Triangles(4, 5, 6, 0, 6, 7, 4, 0),
-	gsSP2Triangles(8, 4, 7, 0, 9, 8, 7, 0),
-	gsSP2Triangles(8, 9, 10, 0, 11, 10, 9, 0),
-	gsSP2Triangles(11, 12, 10, 0, 13, 10, 12, 0),
-	gsSP2Triangles(13, 14, 10, 0, 10, 14, 15, 0),
-	gsSP2Triangles(10, 15, 16, 0, 15, 17, 16, 0),
-	gsSP2Triangles(16, 18, 10, 0, 16, 19, 18, 0),
-	gsSP2Triangles(19, 16, 20, 0, 19, 20, 21, 0),
-	gsSP2Triangles(21, 20, 22, 0, 21, 22, 23, 0),
-	gsSP2Triangles(24, 23, 22, 0, 25, 24, 22, 0),
-	gsSP2Triangles(24, 26, 23, 0, 2, 23, 26, 0),
-	gsSP2Triangles(26, 27, 2, 0, 27, 28, 2, 0),
-	gsSP2Triangles(29, 28, 27, 0, 29, 27, 25, 0),
-	gsSP2Triangles(28, 29, 30, 0, 29, 31, 30, 0),
-	gsSPVertex(bitdw_dl_TOWER_mesh_layer_5_vtx_0 + 160, 31, 0),
-	gsSP2Triangles(0, 1, 2, 0, 2, 3, 4, 0),
-	gsSP2Triangles(2, 5, 3, 0, 6, 3, 5, 0),
-	gsSP2Triangles(6, 7, 3, 0, 7, 4, 3, 0),
-	gsSP2Triangles(8, 9, 10, 0, 11, 9, 8, 0),
-	gsSP2Triangles(11, 8, 12, 0, 11, 12, 6, 0),
-	gsSP2Triangles(13, 11, 6, 0, 13, 6, 1, 0),
-	gsSP2Triangles(13, 14, 11, 0, 11, 14, 9, 0),
-	gsSP2Triangles(15, 16, 17, 0, 15, 17, 18, 0),
-	gsSP2Triangles(18, 17, 19, 0, 18, 19, 20, 0),
-	gsSP2Triangles(21, 20, 19, 0, 22, 18, 20, 0),
-	gsSP2Triangles(18, 22, 23, 0, 24, 23, 22, 0),
-	gsSP2Triangles(24, 22, 25, 0, 25, 26, 24, 0),
-	gsSP2Triangles(25, 27, 26, 0, 25, 28, 27, 0),
-	gsSP2Triangles(15, 28, 25, 0, 27, 28, 15, 0),
-	gsSP2Triangles(29, 27, 15, 0, 15, 18, 29, 0),
-	gsSP2Triangles(18, 30, 29, 0, 18, 23, 30, 0),
-	gsSPVertex(bitdw_dl_TOWER_mesh_layer_5_vtx_0 + 191, 18, 0),
-	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
-	gsSP2Triangles(1, 3, 4, 0, 1, 4, 5, 0),
-	gsSP2Triangles(5, 4, 6, 0, 5, 6, 7, 0),
-	gsSP2Triangles(7, 6, 8, 0, 7, 8, 9, 0),
-	gsSP2Triangles(9, 8, 10, 0, 9, 10, 11, 0),
-	gsSP2Triangles(11, 10, 12, 0, 11, 12, 13, 0),
-	gsSP2Triangles(13, 12, 14, 0, 13, 14, 15, 0),
-	gsSP2Triangles(15, 14, 16, 0, 15, 16, 17, 0),
+	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
+	gsSP2Triangles(4, 0, 3, 0, 4, 3, 5, 0),
+	gsSP2Triangles(4, 6, 0, 0, 0, 6, 7, 0),
+	gsSP2Triangles(0, 7, 1, 0, 1, 7, 8, 0),
+	gsSP2Triangles(9, 10, 11, 0, 12, 9, 11, 0),
+	gsSP2Triangles(11, 13, 12, 0, 11, 14, 13, 0),
+	gsSP2Triangles(14, 11, 15, 0, 14, 15, 16, 0),
+	gsSP2Triangles(16, 15, 17, 0, 16, 17, 18, 0),
+	gsSP2Triangles(19, 18, 17, 0, 20, 19, 17, 0),
+	gsSP2Triangles(19, 21, 18, 0, 22, 18, 21, 0),
+	gsSP2Triangles(21, 23, 22, 0, 23, 24, 22, 0),
+	gsSP2Triangles(25, 24, 23, 0, 25, 23, 20, 0),
+	gsSP2Triangles(24, 25, 26, 0, 25, 27, 26, 0),
+	gsSP2Triangles(25, 5, 27, 0, 27, 28, 26, 0),
+	gsSP2Triangles(27, 29, 28, 0, 3, 28, 29, 0),
+	gsSP2Triangles(3, 24, 28, 0, 24, 26, 28, 0),
+	gsSP2Triangles(12, 30, 9, 0, 31, 30, 12, 0),
+	gsSPVertex(bitdw_dl_TOWER_mesh_layer_5_vtx_0 + 160, 32, 0),
+	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
+	gsSP2Triangles(3, 1, 4, 0, 5, 4, 1, 0),
+	gsSP2Triangles(6, 5, 1, 0, 5, 6, 7, 0),
+	gsSP2Triangles(6, 8, 7, 0, 6, 9, 8, 0),
+	gsSP2Triangles(7, 8, 10, 0, 7, 10, 11, 0),
+	gsSP2Triangles(12, 11, 10, 0, 13, 7, 11, 0),
+	gsSP2Triangles(5, 7, 13, 0, 5, 13, 4, 0),
+	gsSP2Triangles(4, 13, 14, 0, 13, 11, 14, 0),
+	gsSP2Triangles(15, 16, 17, 0, 15, 18, 16, 0),
+	gsSP2Triangles(16, 18, 19, 0, 16, 19, 20, 0),
+	gsSP2Triangles(20, 19, 21, 0, 20, 21, 22, 0),
+	gsSP2Triangles(22, 21, 23, 0, 22, 23, 24, 0),
+	gsSP2Triangles(24, 23, 25, 0, 24, 25, 26, 0),
+	gsSP2Triangles(26, 25, 27, 0, 26, 27, 28, 0),
+	gsSP2Triangles(28, 27, 29, 0, 28, 29, 30, 0),
+	gsSP1Triangle(30, 29, 31, 0),
+	gsSPVertex(bitdw_dl_TOWER_mesh_layer_5_vtx_0 + 192, 3, 0),
+	gsSP1Triangle(0, 1, 2, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx bitdw_dl_TOWER_mesh_layer_5_vtx_1[46] = {
+Vtx bitdw_dl_TOWER_mesh_layer_5_vtx_1[36] = {
 	{{ {751, 839, 582}, 0, {966, 562}, {255, 255, 255, 255} }},
 	{{ {346, 839, 749}, 0, {792, 736}, {56, 255, 103, 255} }},
 	{{ {346, -407, 749}, 0, {792, 736}, {20, 255, 70, 255} }},
@@ -12884,16 +12867,6 @@ Vtx bitdw_dl_TOWER_mesh_layer_5_vtx_1[46] = {
 	{{ {751, 839, 582}, 0, {272, 650}, {255, 255, 255, 255} }},
 	{{ {998, 839, 684}, 0, {284, 650}, {255, 255, 255, 255} }},
 	{{ {1165, 839, 280}, 0, {284, 630}, {83, 255, 134, 255} }},
-	{{ {-16, -829, 599}, 0, {241, 663}, {8, 255, 87, 255} }},
-	{{ {26, -829, 496}, 0, {241, 658}, {8, 255, 99, 255} }},
-	{{ {26, -411, 496}, 0, {241, 658}, {8, 255, 3, 255} }},
-	{{ {26, -829, 497}, 0, {241, 659}, {8, 255, 100, 255} }},
-	{{ {322, -840, 619}, 0, {255, 659}, {0, 255, 88, 255} }},
-	{{ {294, -829, 728}, 0, {256, 663}, {8, 255, 63, 255} }},
-	{{ {294, -411, 728}, 0, {256, 663}, {12, 255, 62, 255} }},
-	{{ {336, -411, 625}, 0, {256, 659}, {255, 255, 255, 255} }},
-	{{ {27, -411, 497}, 0, {241, 659}, {255, 255, 255, 255} }},
-	{{ {-16, -411, 599}, 0, {241, 663}, {8, 255, 66, 255} }},
 };
 
 Gfx bitdw_dl_TOWER_mesh_layer_5_tri_1[] = {
@@ -12913,13 +12886,8 @@ Gfx bitdw_dl_TOWER_mesh_layer_5_tri_1[] = {
 	gsSP2Triangles(27, 28, 25, 0, 29, 28, 27, 0),
 	gsSP2Triangles(29, 30, 28, 0, 4, 30, 29, 0),
 	gsSP2Triangles(29, 31, 4, 0, 4, 24, 30, 0),
-	gsSPVertex(bitdw_dl_TOWER_mesh_layer_5_vtx_1 + 32, 14, 0),
+	gsSPVertex(bitdw_dl_TOWER_mesh_layer_5_vtx_1 + 32, 4, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
-	gsSP2Triangles(4, 5, 6, 0, 7, 5, 4, 0),
-	gsSP2Triangles(7, 4, 8, 0, 4, 9, 8, 0),
-	gsSP2Triangles(10, 8, 9, 0, 10, 11, 8, 0),
-	gsSP2Triangles(12, 11, 10, 0, 12, 10, 13, 0),
-	gsSP2Triangles(13, 6, 12, 0, 4, 6, 13, 0),
 	gsSPEndDisplayList(),
 };
 
@@ -13593,7 +13561,7 @@ Gfx bitdw_dl_walljumps_mesh_layer_5_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_bitdw_dl_weird_lava_001_layer5[] = {
+Gfx mat_bitdw_dl_weird_lava_002_layer5[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, TEXEL1, 0, TEXEL0, 0, TEXEL1, 0, SHADE, COMBINED, PRIMITIVE, COMBINED, ENVIRONMENT, COMBINED, ENVIRONMENT, COMBINED),
 	gsSPGeometryMode(G_CULL_BACK | G_LIGHTING, 0),
@@ -13615,7 +13583,7 @@ Gfx mat_bitdw_dl_weird_lava_001_layer5[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_bitdw_dl_weird_lava_001_layer5[] = {
+Gfx mat_revert_bitdw_dl_weird_lava_002_layer5[] = {
 	gsDPPipeSync(),
 	gsSPGeometryMode(0, G_CULL_BACK | G_LIGHTING),
 	gsDPSetCycleType(G_CYC_1CYCLE),
@@ -13623,7 +13591,7 @@ Gfx mat_revert_bitdw_dl_weird_lava_001_layer5[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_bitdw_dl_sick_looking_rock_layer1[] = {
+Gfx mat_bitdw_dl_sick_looking_rock_001_layer1[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(1, TEXEL0, TEXEL1, TEXEL1, 0, 0, 0, 1, COMBINED, 0, TEXEL1, 0, 0, 0, 0, 1),
 	gsSPGeometryMode(G_SHADE | G_LIGHTING, 0),
@@ -13644,7 +13612,7 @@ Gfx mat_bitdw_dl_sick_looking_rock_layer1[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_bitdw_dl_sick_looking_rock_layer1[] = {
+Gfx mat_revert_bitdw_dl_sick_looking_rock_001_layer1[] = {
 	gsDPPipeSync(),
 	gsSPGeometryMode(0, G_SHADE | G_LIGHTING),
 	gsDPSetTextureDetail(G_TD_CLAMP),
@@ -13701,7 +13669,7 @@ Gfx mat_revert_bitdw_dl_f3d_material_008[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_bitdw_dl_rainbow_001[] = {
+Gfx mat_bitdw_dl_rainbow_002[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
@@ -13710,11 +13678,11 @@ Gfx mat_bitdw_dl_rainbow_001[] = {
 	gsDPLoadBlock(7, 0, 0, 1023, 128),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_32b, 8, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 124),
-	gsSPSetLights1(bitdw_dl_rainbow_001_lights),
+	gsSPSetLights1(bitdw_dl_rainbow_002_lights),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_bitdw_dl_former_metal_002_layer5[] = {
+Gfx mat_bitdw_dl_former_metal_001_layer5[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, TEXEL1, 0, TEXEL0, 0, TEXEL1, 0, SHADE, COMBINED, PRIMITIVE, COMBINED, ENVIRONMENT, COMBINED, ENVIRONMENT, COMBINED),
 	gsSPGeometryMode(G_LIGHTING, 0),
@@ -13736,7 +13704,7 @@ Gfx mat_bitdw_dl_former_metal_002_layer5[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_bitdw_dl_former_metal_002_layer5[] = {
+Gfx mat_revert_bitdw_dl_former_metal_001_layer5[] = {
 	gsDPPipeSync(),
 	gsSPGeometryMode(0, G_LIGHTING),
 	gsDPSetCycleType(G_CYC_1CYCLE),
@@ -13744,7 +13712,7 @@ Gfx mat_revert_bitdw_dl_former_metal_002_layer5[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_bitdw_dl_former_metal_for_first_platform_001_layer1[] = {
+Gfx mat_bitdw_dl_former_metal_for_first_platform_002_layer1[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(1, 0, TEXEL1, 0, TEXEL0, 0, TEXEL1, 0, 1, COMBINED, SHADE, COMBINED, 1, COMBINED, SHADE, COMBINED),
 	gsSPGeometryMode(G_CULL_BACK | G_LIGHTING, 0),
@@ -13759,7 +13727,7 @@ Gfx mat_bitdw_dl_former_metal_for_first_platform_001_layer1[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_bitdw_dl_former_metal_for_first_platform_001_layer1[] = {
+Gfx mat_revert_bitdw_dl_former_metal_for_first_platform_002_layer1[] = {
 	gsDPPipeSync(),
 	gsSPGeometryMode(0, G_CULL_BACK | G_LIGHTING),
 	gsDPSetCycleType(G_CYC_1CYCLE),
@@ -13767,7 +13735,7 @@ Gfx mat_revert_bitdw_dl_former_metal_for_first_platform_001_layer1[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_bitdw_dl_split_platform_001_layer5[] = {
+Gfx mat_bitdw_dl_split_platform_002_layer5[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, TEXEL1, 0, TEXEL0, 0, TEXEL1, 0, SHADE, COMBINED, PRIMITIVE, COMBINED, ENVIRONMENT, COMBINED, ENVIRONMENT, COMBINED),
 	gsSPGeometryMode(G_CULL_BACK | G_LIGHTING, 0),
@@ -13789,7 +13757,7 @@ Gfx mat_bitdw_dl_split_platform_001_layer5[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_bitdw_dl_split_platform_001_layer5[] = {
+Gfx mat_revert_bitdw_dl_split_platform_002_layer5[] = {
 	gsDPPipeSync(),
 	gsSPGeometryMode(0, G_CULL_BACK | G_LIGHTING),
 	gsDPSetCycleType(G_CYC_1CYCLE),
@@ -13797,7 +13765,7 @@ Gfx mat_revert_bitdw_dl_split_platform_001_layer5[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_bitdw_dl_vein_rock_001[] = {
+Gfx mat_bitdw_dl_vein_rock_002[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, 1, 0, 0, 0, TEXEL0, 0, 0, 0, 1),
 	gsSPTexture(65535, 65535, 0, 0, 1),
@@ -13814,7 +13782,7 @@ Gfx mat_bitdw_dl_vein_rock_001[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_bitdw_dl_vein_rock_001[] = {
+Gfx mat_revert_bitdw_dl_vein_rock_002[] = {
 	gsDPPipeSync(),
 	gsDPSetTextureLUT(G_TT_NONE),
 	gsSPEndDisplayList(),
@@ -13874,7 +13842,7 @@ Gfx mat_revert_bitdw_dl_electricity_layer5[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_bitdw_dl_gold_border_001[] = {
+Gfx mat_bitdw_dl_gold_border_002[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(1, 0, ENVIRONMENT, 0, 1, 0, ENVIRONMENT, 0, 1, 0, ENVIRONMENT, 0, 1, 0, ENVIRONMENT, 0),
 	gsSPTexture(65535, 65535, 0, 0, 1),
@@ -13882,7 +13850,7 @@ Gfx mat_bitdw_dl_gold_border_001[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_bitdw_dl_former_metal_003_layer5[] = {
+Gfx mat_bitdw_dl_former_metal_002_layer5[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, TEXEL1, 0, TEXEL0, 0, TEXEL1, 0, SHADE, COMBINED, PRIMITIVE, COMBINED, ENVIRONMENT, COMBINED, ENVIRONMENT, COMBINED),
 	gsSPGeometryMode(G_CULL_BACK | G_LIGHTING, 0),
@@ -13904,7 +13872,7 @@ Gfx mat_bitdw_dl_former_metal_003_layer5[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_bitdw_dl_former_metal_003_layer5[] = {
+Gfx mat_revert_bitdw_dl_former_metal_002_layer5[] = {
 	gsDPPipeSync(),
 	gsSPGeometryMode(0, G_CULL_BACK | G_LIGHTING),
 	gsDPSetCycleType(G_CYC_1CYCLE),
@@ -13912,7 +13880,7 @@ Gfx mat_revert_bitdw_dl_former_metal_003_layer5[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_bitdw_dl_green_001_layer5[] = {
+Gfx mat_bitdw_dl_green_002_layer5[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, TEXEL1, 0, TEXEL0, 0, TEXEL1, 0, SHADE, COMBINED, PRIMITIVE, COMBINED, ENVIRONMENT, COMBINED, ENVIRONMENT, COMBINED),
 	gsSPGeometryMode(G_CULL_BACK | G_LIGHTING, 0),
@@ -13934,7 +13902,7 @@ Gfx mat_bitdw_dl_green_001_layer5[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_bitdw_dl_green_001_layer5[] = {
+Gfx mat_revert_bitdw_dl_green_002_layer5[] = {
 	gsDPPipeSync(),
 	gsSPGeometryMode(0, G_CULL_BACK | G_LIGHTING),
 	gsDPSetCycleType(G_CYC_1CYCLE),
@@ -13942,7 +13910,7 @@ Gfx mat_revert_bitdw_dl_green_001_layer5[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_bitdw_dl_green_marker_002_layer5[] = {
+Gfx mat_bitdw_dl_green_marker_001_layer5[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, TEXEL1, 0, TEXEL0, 0, TEXEL1, 0, SHADE, COMBINED, PRIMITIVE, COMBINED, ENVIRONMENT, COMBINED, ENVIRONMENT, COMBINED),
 	gsSPGeometryMode(G_CULL_BACK | G_LIGHTING, 0),
@@ -13964,7 +13932,7 @@ Gfx mat_bitdw_dl_green_marker_002_layer5[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_bitdw_dl_green_marker_002_layer5[] = {
+Gfx mat_revert_bitdw_dl_green_marker_001_layer5[] = {
 	gsDPPipeSync(),
 	gsSPGeometryMode(0, G_CULL_BACK | G_LIGHTING),
 	gsDPSetCycleType(G_CYC_1CYCLE),
@@ -13972,7 +13940,7 @@ Gfx mat_revert_bitdw_dl_green_marker_002_layer5[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_bitdw_dl_transparent_slide_001_layer5[] = {
+Gfx mat_bitdw_dl_transparent_slide_002_layer5[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, TEXEL1, 0, TEXEL0, 0, TEXEL1, 0, SHADE, COMBINED, PRIMITIVE, COMBINED, ENVIRONMENT, COMBINED, ENVIRONMENT, COMBINED),
 	gsSPGeometryMode(G_CULL_BACK | G_LIGHTING, 0),
@@ -13994,7 +13962,7 @@ Gfx mat_bitdw_dl_transparent_slide_001_layer5[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_bitdw_dl_transparent_slide_001_layer5[] = {
+Gfx mat_revert_bitdw_dl_transparent_slide_002_layer5[] = {
 	gsDPPipeSync(),
 	gsSPGeometryMode(0, G_CULL_BACK | G_LIGHTING),
 	gsDPSetCycleType(G_CYC_1CYCLE),
@@ -14007,9 +13975,9 @@ Gfx bitdw_dl_Cylinder_mesh_layer_5[] = {
 	gsSPVertex(bitdw_dl_Cylinder_mesh_layer_5_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_weird_lava_001_layer5),
+	gsSPDisplayList(mat_bitdw_dl_weird_lava_002_layer5),
 	gsSPDisplayList(bitdw_dl_Cylinder_mesh_layer_5_tri_0),
-	gsSPDisplayList(mat_revert_bitdw_dl_weird_lava_001_layer5),
+	gsSPDisplayList(mat_revert_bitdw_dl_weird_lava_002_layer5),
 	gsSPEndDisplayList(),
 };
 
@@ -14018,9 +13986,9 @@ Gfx bitdw_dl_final_platforms_right_side_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_final_platforms_right_side_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_sick_looking_rock_layer1),
+	gsSPDisplayList(mat_bitdw_dl_sick_looking_rock_001_layer1),
 	gsSPDisplayList(bitdw_dl_final_platforms_right_side_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_bitdw_dl_sick_looking_rock_layer1),
+	gsSPDisplayList(mat_revert_bitdw_dl_sick_looking_rock_001_layer1),
 	gsSPDisplayList(mat_bitdw_dl_f3d_material_006_v4),
 	gsSPDisplayList(bitdw_dl_final_platforms_right_side_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_bitdw_dl_f3d_material_006_v4),
@@ -14032,9 +14000,9 @@ Gfx bitdw_dl_final_platforms_right_side_001_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_final_platforms_right_side_001_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_sick_looking_rock_layer1),
+	gsSPDisplayList(mat_bitdw_dl_sick_looking_rock_001_layer1),
 	gsSPDisplayList(bitdw_dl_final_platforms_right_side_001_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_bitdw_dl_sick_looking_rock_layer1),
+	gsSPDisplayList(mat_revert_bitdw_dl_sick_looking_rock_001_layer1),
 	gsSPDisplayList(mat_bitdw_dl_f3d_material_008),
 	gsSPDisplayList(bitdw_dl_final_platforms_right_side_001_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_bitdw_dl_f3d_material_008),
@@ -14046,7 +14014,7 @@ Gfx bitdw_dl_final_ring_inner_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_final_ring_inner_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_rainbow_001),
+	gsSPDisplayList(mat_bitdw_dl_rainbow_002),
 	gsSPDisplayList(bitdw_dl_final_ring_inner_mesh_layer_1_tri_0),
 	gsSPEndDisplayList(),
 };
@@ -14056,9 +14024,9 @@ Gfx bitdw_dl_final_ring_outer_mesh_layer_5[] = {
 	gsSPVertex(bitdw_dl_final_ring_outer_mesh_layer_5_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_former_metal_002_layer5),
+	gsSPDisplayList(mat_bitdw_dl_former_metal_001_layer5),
 	gsSPDisplayList(bitdw_dl_final_ring_outer_mesh_layer_5_tri_0),
-	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_002_layer5),
+	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_001_layer5),
 	gsSPEndDisplayList(),
 };
 
@@ -14067,7 +14035,7 @@ Gfx bitdw_dl_final_warp_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_final_warp_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_rainbow_001),
+	gsSPDisplayList(mat_bitdw_dl_rainbow_002),
 	gsSPDisplayList(bitdw_dl_final_warp_mesh_layer_1_tri_0),
 	gsSPEndDisplayList(),
 };
@@ -14077,7 +14045,7 @@ Gfx bitdw_dl_FinalTorusLowPoly_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_FinalTorusLowPoly_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_rainbow_001),
+	gsSPDisplayList(mat_bitdw_dl_rainbow_002),
 	gsSPDisplayList(bitdw_dl_FinalTorusLowPoly_mesh_layer_1_tri_0),
 	gsSPEndDisplayList(),
 };
@@ -14087,9 +14055,9 @@ Gfx bitdw_dl_gateway_cube_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_gateway_cube_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_001_layer1),
+	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_002_layer1),
 	gsSPDisplayList(bitdw_dl_gateway_cube_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_001_layer1),
+	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_002_layer1),
 	gsSPEndDisplayList(),
 };
 
@@ -14098,9 +14066,9 @@ Gfx bitdw_dl_mid_platform_mesh_layer_5[] = {
 	gsSPVertex(bitdw_dl_mid_platform_mesh_layer_5_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_split_platform_001_layer5),
+	gsSPDisplayList(mat_bitdw_dl_split_platform_002_layer5),
 	gsSPDisplayList(bitdw_dl_mid_platform_mesh_layer_5_tri_0),
-	gsSPDisplayList(mat_revert_bitdw_dl_split_platform_001_layer5),
+	gsSPDisplayList(mat_revert_bitdw_dl_split_platform_002_layer5),
 	gsSPEndDisplayList(),
 };
 
@@ -14112,12 +14080,12 @@ Gfx bitdw_dl_Cone_002_mesh_layer_1[] = {
 	gsSPDisplayList(mat_bitdw_dl_f3d_material_008),
 	gsSPDisplayList(bitdw_dl_Cone_002_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_revert_bitdw_dl_f3d_material_008),
-	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_001_layer1),
+	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_002_layer1),
 	gsSPDisplayList(bitdw_dl_Cone_002_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_001_layer1),
-	gsSPDisplayList(mat_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_002_layer1),
+	gsSPDisplayList(mat_bitdw_dl_vein_rock_002),
 	gsSPDisplayList(bitdw_dl_Cone_002_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_002),
 	gsSPEndDisplayList(),
 };
 
@@ -14129,12 +14097,12 @@ Gfx bitdw_dl_Cone_003_mesh_layer_1[] = {
 	gsSPDisplayList(mat_bitdw_dl_f3d_material_008),
 	gsSPDisplayList(bitdw_dl_Cone_003_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_revert_bitdw_dl_f3d_material_008),
-	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_001_layer1),
+	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_002_layer1),
 	gsSPDisplayList(bitdw_dl_Cone_003_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_001_layer1),
-	gsSPDisplayList(mat_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_002_layer1),
+	gsSPDisplayList(mat_bitdw_dl_vein_rock_002),
 	gsSPDisplayList(bitdw_dl_Cone_003_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_002),
 	gsSPEndDisplayList(),
 };
 
@@ -14146,12 +14114,12 @@ Gfx bitdw_dl_Cone_005_mesh_layer_1[] = {
 	gsSPDisplayList(mat_bitdw_dl_f3d_material_008),
 	gsSPDisplayList(bitdw_dl_Cone_005_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_revert_bitdw_dl_f3d_material_008),
-	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_001_layer1),
+	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_002_layer1),
 	gsSPDisplayList(bitdw_dl_Cone_005_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_001_layer1),
-	gsSPDisplayList(mat_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_002_layer1),
+	gsSPDisplayList(mat_bitdw_dl_vein_rock_002),
 	gsSPDisplayList(bitdw_dl_Cone_005_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_002),
 	gsSPEndDisplayList(),
 };
 
@@ -14163,12 +14131,12 @@ Gfx bitdw_dl_Cone_006_mesh_layer_1[] = {
 	gsSPDisplayList(mat_bitdw_dl_f3d_material_008),
 	gsSPDisplayList(bitdw_dl_Cone_006_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_revert_bitdw_dl_f3d_material_008),
-	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_001_layer1),
+	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_002_layer1),
 	gsSPDisplayList(bitdw_dl_Cone_006_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_001_layer1),
-	gsSPDisplayList(mat_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_002_layer1),
+	gsSPDisplayList(mat_bitdw_dl_vein_rock_002),
 	gsSPDisplayList(bitdw_dl_Cone_006_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_002),
 	gsSPEndDisplayList(),
 };
 
@@ -14180,12 +14148,12 @@ Gfx bitdw_dl_Cone_007_mesh_layer_1[] = {
 	gsSPDisplayList(mat_bitdw_dl_f3d_material_008),
 	gsSPDisplayList(bitdw_dl_Cone_007_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_revert_bitdw_dl_f3d_material_008),
-	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_001_layer1),
+	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_002_layer1),
 	gsSPDisplayList(bitdw_dl_Cone_007_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_001_layer1),
-	gsSPDisplayList(mat_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_002_layer1),
+	gsSPDisplayList(mat_bitdw_dl_vein_rock_002),
 	gsSPDisplayList(bitdw_dl_Cone_007_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_002),
 	gsSPEndDisplayList(),
 };
 
@@ -14197,12 +14165,12 @@ Gfx bitdw_dl_Cone_008_mesh_layer_1[] = {
 	gsSPDisplayList(mat_bitdw_dl_f3d_material_008),
 	gsSPDisplayList(bitdw_dl_Cone_008_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_revert_bitdw_dl_f3d_material_008),
-	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_001_layer1),
+	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_002_layer1),
 	gsSPDisplayList(bitdw_dl_Cone_008_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_001_layer1),
-	gsSPDisplayList(mat_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_002_layer1),
+	gsSPDisplayList(mat_bitdw_dl_vein_rock_002),
 	gsSPDisplayList(bitdw_dl_Cone_008_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_002),
 	gsSPEndDisplayList(),
 };
 
@@ -14214,12 +14182,12 @@ Gfx bitdw_dl_Cone_009_mesh_layer_1[] = {
 	gsSPDisplayList(mat_bitdw_dl_f3d_material_008),
 	gsSPDisplayList(bitdw_dl_Cone_009_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_revert_bitdw_dl_f3d_material_008),
-	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_001_layer1),
+	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_002_layer1),
 	gsSPDisplayList(bitdw_dl_Cone_009_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_001_layer1),
-	gsSPDisplayList(mat_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_002_layer1),
+	gsSPDisplayList(mat_bitdw_dl_vein_rock_002),
 	gsSPDisplayList(bitdw_dl_Cone_009_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_002),
 	gsSPEndDisplayList(),
 };
 
@@ -14231,12 +14199,12 @@ Gfx bitdw_dl_Cone_010_mesh_layer_1[] = {
 	gsSPDisplayList(mat_bitdw_dl_f3d_material_008),
 	gsSPDisplayList(bitdw_dl_Cone_010_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_revert_bitdw_dl_f3d_material_008),
-	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_001_layer1),
+	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_002_layer1),
 	gsSPDisplayList(bitdw_dl_Cone_010_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_001_layer1),
-	gsSPDisplayList(mat_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_002_layer1),
+	gsSPDisplayList(mat_bitdw_dl_vein_rock_002),
 	gsSPDisplayList(bitdw_dl_Cone_010_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_002),
 	gsSPEndDisplayList(),
 };
 
@@ -14248,12 +14216,12 @@ Gfx bitdw_dl_Cone_011_mesh_layer_1[] = {
 	gsSPDisplayList(mat_bitdw_dl_f3d_material_008),
 	gsSPDisplayList(bitdw_dl_Cone_011_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_revert_bitdw_dl_f3d_material_008),
-	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_001_layer1),
+	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_002_layer1),
 	gsSPDisplayList(bitdw_dl_Cone_011_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_001_layer1),
-	gsSPDisplayList(mat_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_002_layer1),
+	gsSPDisplayList(mat_bitdw_dl_vein_rock_002),
 	gsSPDisplayList(bitdw_dl_Cone_011_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_002),
 	gsSPEndDisplayList(),
 };
 
@@ -14265,12 +14233,12 @@ Gfx bitdw_dl_Cone_012_mesh_layer_1[] = {
 	gsSPDisplayList(mat_bitdw_dl_f3d_material_008),
 	gsSPDisplayList(bitdw_dl_Cone_012_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_revert_bitdw_dl_f3d_material_008),
-	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_001_layer1),
+	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_002_layer1),
 	gsSPDisplayList(bitdw_dl_Cone_012_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_001_layer1),
-	gsSPDisplayList(mat_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_002_layer1),
+	gsSPDisplayList(mat_bitdw_dl_vein_rock_002),
 	gsSPDisplayList(bitdw_dl_Cone_012_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_002),
 	gsSPEndDisplayList(),
 };
 
@@ -14282,12 +14250,12 @@ Gfx bitdw_dl_Cone_013_mesh_layer_1[] = {
 	gsSPDisplayList(mat_bitdw_dl_f3d_material_008),
 	gsSPDisplayList(bitdw_dl_Cone_013_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_revert_bitdw_dl_f3d_material_008),
-	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_001_layer1),
+	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_002_layer1),
 	gsSPDisplayList(bitdw_dl_Cone_013_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_001_layer1),
-	gsSPDisplayList(mat_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_002_layer1),
+	gsSPDisplayList(mat_bitdw_dl_vein_rock_002),
 	gsSPDisplayList(bitdw_dl_Cone_013_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_002),
 	gsSPEndDisplayList(),
 };
 
@@ -14299,12 +14267,12 @@ Gfx bitdw_dl_Cone_014_mesh_layer_1[] = {
 	gsSPDisplayList(mat_bitdw_dl_f3d_material_008),
 	gsSPDisplayList(bitdw_dl_Cone_014_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_revert_bitdw_dl_f3d_material_008),
-	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_001_layer1),
+	gsSPDisplayList(mat_bitdw_dl_former_metal_for_first_platform_002_layer1),
 	gsSPDisplayList(bitdw_dl_Cone_014_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_001_layer1),
-	gsSPDisplayList(mat_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_for_first_platform_002_layer1),
+	gsSPDisplayList(mat_bitdw_dl_vein_rock_002),
 	gsSPDisplayList(bitdw_dl_Cone_014_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_002),
 	gsSPEndDisplayList(),
 };
 
@@ -14316,7 +14284,7 @@ Gfx bitdw_dl_slidey_stuff_mesh_layer_1[] = {
 	gsSPDisplayList(mat_bitdw_dl_f3d_material_007),
 	gsSPDisplayList(bitdw_dl_slidey_stuff_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_revert_bitdw_dl_f3d_material_007),
-	gsSPDisplayList(mat_bitdw_dl_gold_border_001),
+	gsSPDisplayList(mat_bitdw_dl_gold_border_002),
 	gsSPDisplayList(bitdw_dl_slidey_stuff_mesh_layer_1_tri_1),
 	gsSPEndDisplayList(),
 };
@@ -14329,9 +14297,9 @@ Gfx bitdw_dl_slidey_stuff_mesh_layer_5[] = {
 	gsSPDisplayList(mat_bitdw_dl_electricity_layer5),
 	gsSPDisplayList(bitdw_dl_slidey_stuff_mesh_layer_5_tri_0),
 	gsSPDisplayList(mat_revert_bitdw_dl_electricity_layer5),
-	gsSPDisplayList(mat_bitdw_dl_weird_lava_001_layer5),
+	gsSPDisplayList(mat_bitdw_dl_weird_lava_002_layer5),
 	gsSPDisplayList(bitdw_dl_slidey_stuff_mesh_layer_5_tri_1),
-	gsSPDisplayList(mat_revert_bitdw_dl_weird_lava_001_layer5),
+	gsSPDisplayList(mat_revert_bitdw_dl_weird_lava_002_layer5),
 	gsSPEndDisplayList(),
 };
 
@@ -14343,9 +14311,9 @@ Gfx bitdw_dl_start_platform_mesh_layer_1[] = {
 	gsSPDisplayList(mat_bitdw_dl_f3d_material_008),
 	gsSPDisplayList(bitdw_dl_start_platform_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_revert_bitdw_dl_f3d_material_008),
-	gsSPDisplayList(mat_bitdw_dl_sick_looking_rock_layer1),
+	gsSPDisplayList(mat_bitdw_dl_sick_looking_rock_001_layer1),
 	gsSPDisplayList(bitdw_dl_start_platform_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_bitdw_dl_sick_looking_rock_layer1),
+	gsSPDisplayList(mat_revert_bitdw_dl_sick_looking_rock_001_layer1),
 	gsSPEndDisplayList(),
 };
 
@@ -14354,9 +14322,9 @@ Gfx bitdw_dl_start_platform_mesh_layer_5[] = {
 	gsSPVertex(bitdw_dl_start_platform_mesh_layer_5_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_weird_lava_001_layer5),
+	gsSPDisplayList(mat_bitdw_dl_weird_lava_002_layer5),
 	gsSPDisplayList(bitdw_dl_start_platform_mesh_layer_5_tri_0),
-	gsSPDisplayList(mat_revert_bitdw_dl_weird_lava_001_layer5),
+	gsSPDisplayList(mat_revert_bitdw_dl_weird_lava_002_layer5),
 	gsSPEndDisplayList(),
 };
 
@@ -14365,9 +14333,9 @@ Gfx bitdw_dl_steppingstones_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_steppingstones_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_sick_looking_rock_layer1),
+	gsSPDisplayList(mat_bitdw_dl_sick_looking_rock_001_layer1),
 	gsSPDisplayList(bitdw_dl_steppingstones_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_bitdw_dl_sick_looking_rock_layer1),
+	gsSPDisplayList(mat_revert_bitdw_dl_sick_looking_rock_001_layer1),
 	gsSPDisplayList(mat_bitdw_dl_f3d_material_006_v4),
 	gsSPDisplayList(bitdw_dl_steppingstones_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_bitdw_dl_f3d_material_006_v4),
@@ -14379,9 +14347,9 @@ Gfx bitdw_dl_steppingstones_001_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_steppingstones_001_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_sick_looking_rock_layer1),
+	gsSPDisplayList(mat_bitdw_dl_sick_looking_rock_001_layer1),
 	gsSPDisplayList(bitdw_dl_steppingstones_001_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_bitdw_dl_sick_looking_rock_layer1),
+	gsSPDisplayList(mat_revert_bitdw_dl_sick_looking_rock_001_layer1),
 	gsSPDisplayList(mat_bitdw_dl_f3d_material_006_v4),
 	gsSPDisplayList(bitdw_dl_steppingstones_001_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_bitdw_dl_f3d_material_006_v4),
@@ -14393,9 +14361,9 @@ Gfx bitdw_dl_steppingstones_002_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_steppingstones_002_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_sick_looking_rock_layer1),
+	gsSPDisplayList(mat_bitdw_dl_sick_looking_rock_001_layer1),
 	gsSPDisplayList(bitdw_dl_steppingstones_002_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_bitdw_dl_sick_looking_rock_layer1),
+	gsSPDisplayList(mat_revert_bitdw_dl_sick_looking_rock_001_layer1),
 	gsSPDisplayList(mat_bitdw_dl_f3d_material_006_v4),
 	gsSPDisplayList(bitdw_dl_steppingstones_002_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_bitdw_dl_f3d_material_006_v4),
@@ -14407,9 +14375,9 @@ Gfx bitdw_dl_steppingstones_003_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_steppingstones_003_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_bitdw_dl_vein_rock_002),
 	gsSPDisplayList(bitdw_dl_steppingstones_003_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_002),
 	gsSPDisplayList(mat_bitdw_dl_f3d_material_006_v4),
 	gsSPDisplayList(bitdw_dl_steppingstones_003_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_bitdw_dl_f3d_material_006_v4),
@@ -14421,11 +14389,11 @@ Gfx bitdw_dl_Torus_001_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_Torus_001_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_rainbow_001),
+	gsSPDisplayList(mat_bitdw_dl_rainbow_002),
 	gsSPDisplayList(bitdw_dl_Torus_001_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_bitdw_dl_sick_looking_rock_layer1),
+	gsSPDisplayList(mat_bitdw_dl_sick_looking_rock_001_layer1),
 	gsSPDisplayList(bitdw_dl_Torus_001_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_bitdw_dl_sick_looking_rock_layer1),
+	gsSPDisplayList(mat_revert_bitdw_dl_sick_looking_rock_001_layer1),
 	gsSPEndDisplayList(),
 };
 
@@ -14434,11 +14402,11 @@ Gfx bitdw_dl_Torus_002_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_Torus_002_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_rainbow_001),
+	gsSPDisplayList(mat_bitdw_dl_rainbow_002),
 	gsSPDisplayList(bitdw_dl_Torus_002_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_bitdw_dl_sick_looking_rock_layer1),
+	gsSPDisplayList(mat_bitdw_dl_sick_looking_rock_001_layer1),
 	gsSPDisplayList(bitdw_dl_Torus_002_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_bitdw_dl_sick_looking_rock_layer1),
+	gsSPDisplayList(mat_revert_bitdw_dl_sick_looking_rock_001_layer1),
 	gsSPEndDisplayList(),
 };
 
@@ -14447,7 +14415,7 @@ Gfx bitdw_dl_Torus_003_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_Torus_003_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_rainbow_001),
+	gsSPDisplayList(mat_bitdw_dl_rainbow_002),
 	gsSPDisplayList(bitdw_dl_Torus_003_mesh_layer_1_tri_0),
 	gsSPEndDisplayList(),
 };
@@ -14457,9 +14425,9 @@ Gfx bitdw_dl_Torus_003_mesh_layer_5[] = {
 	gsSPVertex(bitdw_dl_Torus_003_mesh_layer_5_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_weird_lava_001_layer5),
+	gsSPDisplayList(mat_bitdw_dl_weird_lava_002_layer5),
 	gsSPDisplayList(bitdw_dl_Torus_003_mesh_layer_5_tri_0),
-	gsSPDisplayList(mat_revert_bitdw_dl_weird_lava_001_layer5),
+	gsSPDisplayList(mat_revert_bitdw_dl_weird_lava_002_layer5),
 	gsSPEndDisplayList(),
 };
 
@@ -14468,11 +14436,11 @@ Gfx bitdw_dl_Torus_004_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_Torus_004_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_rainbow_001),
+	gsSPDisplayList(mat_bitdw_dl_rainbow_002),
 	gsSPDisplayList(bitdw_dl_Torus_004_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_bitdw_dl_vein_rock_002),
 	gsSPDisplayList(bitdw_dl_Torus_004_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_002),
 	gsSPEndDisplayList(),
 };
 
@@ -14481,11 +14449,11 @@ Gfx bitdw_dl_Torus_005_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_Torus_005_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_rainbow_001),
+	gsSPDisplayList(mat_bitdw_dl_rainbow_002),
 	gsSPDisplayList(bitdw_dl_Torus_005_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_bitdw_dl_vein_rock_002),
 	gsSPDisplayList(bitdw_dl_Torus_005_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_002),
 	gsSPEndDisplayList(),
 };
 
@@ -14494,10 +14462,10 @@ Gfx bitdw_dl_Torus_006_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_Torus_006_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_bitdw_dl_vein_rock_002),
 	gsSPDisplayList(bitdw_dl_Torus_006_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_001),
-	gsSPDisplayList(mat_bitdw_dl_rainbow_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_002),
+	gsSPDisplayList(mat_bitdw_dl_rainbow_002),
 	gsSPDisplayList(bitdw_dl_Torus_006_mesh_layer_1_tri_1),
 	gsSPEndDisplayList(),
 };
@@ -14507,11 +14475,11 @@ Gfx bitdw_dl_Torus_023_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_Torus_023_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_rainbow_001),
+	gsSPDisplayList(mat_bitdw_dl_rainbow_002),
 	gsSPDisplayList(bitdw_dl_Torus_023_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_bitdw_dl_vein_rock_002),
 	gsSPDisplayList(bitdw_dl_Torus_023_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_001),
+	gsSPDisplayList(mat_revert_bitdw_dl_vein_rock_002),
 	gsSPDisplayList(mat_bitdw_dl_f3d_material_006_v4),
 	gsSPDisplayList(bitdw_dl_Torus_023_mesh_layer_1_tri_2),
 	gsSPDisplayList(mat_revert_bitdw_dl_f3d_material_006_v4),
@@ -14534,9 +14502,9 @@ Gfx bitdw_dl_first_torus_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_first_torus_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_rainbow_001),
+	gsSPDisplayList(mat_bitdw_dl_rainbow_002),
 	gsSPDisplayList(bitdw_dl_first_torus_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_bitdw_dl_gold_border_001),
+	gsSPDisplayList(mat_bitdw_dl_gold_border_002),
 	gsSPDisplayList(bitdw_dl_first_torus_mesh_layer_1_tri_1),
 	gsSPEndDisplayList(),
 };
@@ -14546,9 +14514,9 @@ Gfx bitdw_dl_first_torus_mesh_layer_5[] = {
 	gsSPVertex(bitdw_dl_first_torus_mesh_layer_5_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_former_metal_002_layer5),
+	gsSPDisplayList(mat_bitdw_dl_former_metal_001_layer5),
 	gsSPDisplayList(bitdw_dl_first_torus_mesh_layer_5_tri_0),
-	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_002_layer5),
+	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_001_layer5),
 	gsSPEndDisplayList(),
 };
 
@@ -14557,7 +14525,7 @@ Gfx bitdw_dl_Torus_009_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_Torus_009_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_rainbow_001),
+	gsSPDisplayList(mat_bitdw_dl_rainbow_002),
 	gsSPDisplayList(bitdw_dl_Torus_009_mesh_layer_1_tri_0),
 	gsSPEndDisplayList(),
 };
@@ -14567,9 +14535,9 @@ Gfx bitdw_dl_second_torus_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_second_torus_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_rainbow_001),
+	gsSPDisplayList(mat_bitdw_dl_rainbow_002),
 	gsSPDisplayList(bitdw_dl_second_torus_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_bitdw_dl_gold_border_001),
+	gsSPDisplayList(mat_bitdw_dl_gold_border_002),
 	gsSPDisplayList(bitdw_dl_second_torus_mesh_layer_1_tri_1),
 	gsSPEndDisplayList(),
 };
@@ -14579,9 +14547,9 @@ Gfx bitdw_dl_second_torus_mesh_layer_5[] = {
 	gsSPVertex(bitdw_dl_second_torus_mesh_layer_5_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_former_metal_002_layer5),
+	gsSPDisplayList(mat_bitdw_dl_former_metal_001_layer5),
 	gsSPDisplayList(bitdw_dl_second_torus_mesh_layer_5_tri_0),
-	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_002_layer5),
+	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_001_layer5),
 	gsSPEndDisplayList(),
 };
 
@@ -14590,7 +14558,7 @@ Gfx bitdw_dl_Torus_011_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_Torus_011_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_rainbow_001),
+	gsSPDisplayList(mat_bitdw_dl_rainbow_002),
 	gsSPDisplayList(bitdw_dl_Torus_011_mesh_layer_1_tri_0),
 	gsSPEndDisplayList(),
 };
@@ -14600,9 +14568,9 @@ Gfx bitdw_dl_area_2_torus_mesh_layer_5[] = {
 	gsSPVertex(bitdw_dl_area_2_torus_mesh_layer_5_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_former_metal_002_layer5),
+	gsSPDisplayList(mat_bitdw_dl_former_metal_001_layer5),
 	gsSPDisplayList(bitdw_dl_area_2_torus_mesh_layer_5_tri_0),
-	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_002_layer5),
+	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_001_layer5),
 	gsSPEndDisplayList(),
 };
 
@@ -14611,7 +14579,7 @@ Gfx bitdw_dl_area_2_torus_001_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_area_2_torus_001_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_rainbow_001),
+	gsSPDisplayList(mat_bitdw_dl_rainbow_002),
 	gsSPDisplayList(bitdw_dl_area_2_torus_001_mesh_layer_1_tri_0),
 	gsSPEndDisplayList(),
 };
@@ -14621,7 +14589,7 @@ Gfx bitdw_dl_Torus_015_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_Torus_015_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_rainbow_001),
+	gsSPDisplayList(mat_bitdw_dl_rainbow_002),
 	gsSPDisplayList(bitdw_dl_Torus_015_mesh_layer_1_tri_0),
 	gsSPEndDisplayList(),
 };
@@ -14631,12 +14599,12 @@ Gfx bitdw_dl_TOWER_mesh_layer_5[] = {
 	gsSPVertex(bitdw_dl_TOWER_mesh_layer_5_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_former_metal_003_layer5),
+	gsSPDisplayList(mat_bitdw_dl_former_metal_002_layer5),
 	gsSPDisplayList(bitdw_dl_TOWER_mesh_layer_5_tri_0),
-	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_003_layer5),
-	gsSPDisplayList(mat_bitdw_dl_green_001_layer5),
+	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_002_layer5),
+	gsSPDisplayList(mat_bitdw_dl_green_002_layer5),
 	gsSPDisplayList(bitdw_dl_TOWER_mesh_layer_5_tri_1),
-	gsSPDisplayList(mat_revert_bitdw_dl_green_001_layer5),
+	gsSPDisplayList(mat_revert_bitdw_dl_green_002_layer5),
 	gsSPEndDisplayList(),
 };
 
@@ -14645,9 +14613,9 @@ Gfx bitdw_dl_TOWER_panel_mesh_layer_5[] = {
 	gsSPVertex(bitdw_dl_TOWER_panel_mesh_layer_5_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_green_marker_002_layer5),
+	gsSPDisplayList(mat_bitdw_dl_green_marker_001_layer5),
 	gsSPDisplayList(bitdw_dl_TOWER_panel_mesh_layer_5_tri_0),
-	gsSPDisplayList(mat_revert_bitdw_dl_green_marker_002_layer5),
+	gsSPDisplayList(mat_revert_bitdw_dl_green_marker_001_layer5),
 	gsSPEndDisplayList(),
 };
 
@@ -14656,9 +14624,9 @@ Gfx bitdw_dl_TOWER_002_mesh_layer_5[] = {
 	gsSPVertex(bitdw_dl_TOWER_002_mesh_layer_5_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_transparent_slide_001_layer5),
+	gsSPDisplayList(mat_bitdw_dl_transparent_slide_002_layer5),
 	gsSPDisplayList(bitdw_dl_TOWER_002_mesh_layer_5_tri_0),
-	gsSPDisplayList(mat_revert_bitdw_dl_transparent_slide_001_layer5),
+	gsSPDisplayList(mat_revert_bitdw_dl_transparent_slide_002_layer5),
 	gsSPEndDisplayList(),
 };
 
@@ -14667,12 +14635,12 @@ Gfx bitdw_dl_TOWER_003_mesh_layer_5[] = {
 	gsSPVertex(bitdw_dl_TOWER_003_mesh_layer_5_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_former_metal_002_layer5),
+	gsSPDisplayList(mat_bitdw_dl_former_metal_001_layer5),
 	gsSPDisplayList(bitdw_dl_TOWER_003_mesh_layer_5_tri_0),
-	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_002_layer5),
-	gsSPDisplayList(mat_bitdw_dl_green_001_layer5),
+	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_001_layer5),
+	gsSPDisplayList(mat_bitdw_dl_green_002_layer5),
 	gsSPDisplayList(bitdw_dl_TOWER_003_mesh_layer_5_tri_1),
-	gsSPDisplayList(mat_revert_bitdw_dl_green_001_layer5),
+	gsSPDisplayList(mat_revert_bitdw_dl_green_002_layer5),
 	gsSPEndDisplayList(),
 };
 
@@ -14681,9 +14649,9 @@ Gfx bitdw_dl_TOWERLOD_mesh_layer_5[] = {
 	gsSPVertex(bitdw_dl_TOWERLOD_mesh_layer_5_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_former_metal_002_layer5),
+	gsSPDisplayList(mat_bitdw_dl_former_metal_001_layer5),
 	gsSPDisplayList(bitdw_dl_TOWERLOD_mesh_layer_5_tri_0),
-	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_002_layer5),
+	gsSPDisplayList(mat_revert_bitdw_dl_former_metal_001_layer5),
 	gsSPEndDisplayList(),
 };
 
@@ -14692,7 +14660,7 @@ Gfx bitdw_dl_first_torus_001_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_first_torus_001_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_rainbow_001),
+	gsSPDisplayList(mat_bitdw_dl_rainbow_002),
 	gsSPDisplayList(bitdw_dl_first_torus_001_mesh_layer_1_tri_0),
 	gsSPEndDisplayList(),
 };
@@ -14702,7 +14670,7 @@ Gfx bitdw_dl_first_torus_002_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_first_torus_002_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_rainbow_001),
+	gsSPDisplayList(mat_bitdw_dl_rainbow_002),
 	gsSPDisplayList(bitdw_dl_first_torus_002_mesh_layer_1_tri_0),
 	gsSPEndDisplayList(),
 };
@@ -14712,7 +14680,7 @@ Gfx bitdw_dl_first_torus_003_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_first_torus_003_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_rainbow_001),
+	gsSPDisplayList(mat_bitdw_dl_rainbow_002),
 	gsSPDisplayList(bitdw_dl_first_torus_003_mesh_layer_1_tri_0),
 	gsSPEndDisplayList(),
 };
@@ -14722,7 +14690,7 @@ Gfx bitdw_dl_second_torus_001_mesh_layer_1[] = {
 	gsSPVertex(bitdw_dl_second_torus_001_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_rainbow_001),
+	gsSPDisplayList(mat_bitdw_dl_rainbow_002),
 	gsSPDisplayList(bitdw_dl_second_torus_001_mesh_layer_1_tri_0),
 	gsSPEndDisplayList(),
 };
@@ -14743,9 +14711,9 @@ Gfx bitdw_dl_walljumps_mesh_layer_5[] = {
 	gsSPVertex(bitdw_dl_walljumps_mesh_layer_5_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_bitdw_dl_weird_lava_001_layer5),
+	gsSPDisplayList(mat_bitdw_dl_weird_lava_002_layer5),
 	gsSPDisplayList(bitdw_dl_walljumps_mesh_layer_5_tri_0),
-	gsSPDisplayList(mat_revert_bitdw_dl_weird_lava_001_layer5),
+	gsSPDisplayList(mat_revert_bitdw_dl_weird_lava_002_layer5),
 	gsSPEndDisplayList(),
 };
 

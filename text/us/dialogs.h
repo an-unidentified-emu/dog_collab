@@ -828,21 +828,11 @@ Good luck, Mario! Our\n\
 fate is in your hands.")
 
 DEFINE_DIALOG(DIALOG_067, 1, 5, 30, 200, "\
-Grrr... Mario, after you\n\
-embarrassed me at our\n\
-last showdown, I had to\n\
-put my chain chomp in the\n\
-pound for training...\n\
-But you're out of luck!\n\
-I've locked " TEXT_DOG "\n\
-in a cage... Gwa ha ha!!\n\
-Go ahead--just try to\n\
-grab me by the tail!\n\
-There are no bombs here, \n\
-so what could you possibly \n\
-throw me into? Certainly \n\
-not the dog cage!\n\
-Never! Ha!")
+Grrr... Mario \n\
+Impressive that you made\n\
+it here, don't worry, \n\
+I've only been buffed a \n\
+tiny bit.")
 
 DEFINE_DIALOG(DIALOG_068, 1, 5, 30, 200, "\
 It's Lethal Lava Land!\n\
@@ -1425,25 +1415,14 @@ DEFINE_DIALOG(DIALOG_118, 1, 6, 95, 200, "\
 ")
 
 DEFINE_DIALOG(DIALOG_119, 1, 6, 30, 200, "\
-Grrr! I was a bit\n\
-careless. This is not as I\n\
-had planned... this stupid\n\
-chain chomp needs to go\n\
-back to the pound! At least\n\
-I still have Peach!\n\
-Bwa ha ha! You'll get no\n\
-more Stars from me! I'm\n\
-not finished with you yet,\n\
-but I'll let you go for\n\
-now. You'll pay for this...\n\
-later!")
+GG")
 
 DEFINE_DIALOG(DIALOG_120, 1, 4, 30, 200, "\
 Ooowaah! Can it be that\n\
 I've lost??? The power of\n\
 the Stars has failed me...\n\
 this time.\n\
-Consider this a draw.\n\
+Consider this a draw.\n\ 
 Next time, I'll be in\n\
 perfect condition.\n\
 \n\

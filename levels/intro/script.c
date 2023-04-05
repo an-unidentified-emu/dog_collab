@@ -46,7 +46,7 @@ const LevelScript level_intro_splash_screen[] = {
     AREA(/*index*/ 1, intro_geo_splash_screen),
         // OBJECT(/*model*/ MODEL_GOOMBA, /*pos*/ -570, -540, 1500, /*angle*/ 0,  50, 0, /*behParam*/ BP(0x18, 0x00, 0x10, 0x0B), /*beh*/ bhvFloombaStartup),
         // OBJECT(/*model*/ MODEL_GOOMBA, /*pos*/  570, -540, 1500, /*angle*/ 0, -50, 0, /*behParam*/ BP(0x18, 0x00, 0x90, 0x0B), /*beh*/ bhvFloombaStartup),
-        OBJECT(/*model*/ MODEL_DOG, /*pos*/ 0, -75, 2625, /*angle*/ 10, 0, 0, /*behParam*/ BP(0x18, 0x00, 0x10, 0x0B), /*beh*/ bhvDogStartup),
+        OBJECT(/*model*/ MODEL_DOG, /*pos*/ 520, -540, 1500, /*angle*/ 10, -10, 0, /*behParam*/ BP(0x18, 0x00, 0x10, 0x0B), /*beh*/ bhvDogStartup),
     END_AREA(),
     FREE_LEVEL_POOL(),
 

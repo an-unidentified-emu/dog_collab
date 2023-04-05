@@ -2301,7 +2301,7 @@ void bhv_bowser_loop(void) {
     angleToCenter = abs_angle_diff(o->oMoveAngleYaw, o->oBowserAngleToCenter);
     // Reset Status
     o->oBowserStatus &= ~0xFF;
-    o->oAction = BOWSER_ACT_DEAD;
+    //o->oAction = BOWSER_ACT_DEAD;
     if (cur_obj_nearest_object_with_behavior(bhvGoddardCage) == NULL && mine != NULL && (mine->oAction == EMU_BOMB_ACT_LAUNCHED || mine->oAction == EMU_BOMB_ACT_EXPLODE)) {
         if (bowser_check_hit_mine()) {
             o->oHealth--;

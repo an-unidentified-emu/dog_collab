@@ -5611,6 +5611,7 @@ const BehaviorScript bhvDogStartup[] = {
     LOAD_ANIMATIONS(oAnimations, dog_anims),
     OR_INT(oFlags, OBJ_FLAG_ACTIVE_FROM_AFAR | OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
     SET_HOME(),
+    SCALE(0, 50),
     ANIMATE(DOG_ANIM_BARK),
     CALL_NATIVE(bhv_intro_object_init),
     SET_FLOAT(oDrawingDistance, 30000),
