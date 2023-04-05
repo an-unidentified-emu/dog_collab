@@ -6,9 +6,9 @@
 
 // Internal ROM name. NEEDS TO BE **EXACTLY** 20 CHARACTERS. Can't be 19 characters, can't be 21 characters. You can fill it with spaces.
 // The end quote should be here:               "
-#define INTERNAL_ROM_NAME "DOG COLLAB          "
+#define INTERNAL_ROM_NAME "DOG COLLAB KAIZO BRR"
 
-#define DOG_COLLAB_VERSION "1.0.1"
+#define DOG_COLLAB_VERSION "1.1.0 Beta"
 
 // Enables Rumble Pak Support.
 // Currently not recommended, as it may cause random crashes.

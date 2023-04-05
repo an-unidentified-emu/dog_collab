@@ -2146,12 +2146,9 @@ s32 render_pause_courses_and_castle(void) {
                 play_sound(SOUND_MENU_PAUSE_CLOSE, gGlobalSoundSource);
                 gDialogBoxState = DIALOG_STATE_OPENING;
                 gMenuMode = MENU_MODE_NONE;
-
-                if (gDialogLineNum == MENU_OPT_EXIT_COURSE) {
-                    index = gDialogLineNum;
-                } else { // MENU_OPT_CONTINUE or MENU_OPT_CAMERA_ANGLE_R
+// MENU_OPT_CONTINUE or MENU_OPT_CAMERA_ANGLE_R
                     index = MENU_OPT_DEFAULT;
-                }
+
 
                 return index;
             }
@@ -2921,7 +2918,7 @@ void render_hub_selection(void) {
                     if(hubSelections[gWorldID][gFocusID].courseID == 6 && gCurrActNum > 1) { //ff special case
                         sSourceWarpNodeId = 0x1C;
                     }
-                    gIntroCutsceneState = 0;
+                    gIntroCutsceneState = 8;
                     play_sound(SOUND_MENU_STAR_SOUND_LETS_A_GO, gGlobalSoundSource);
                 } else if(hubSelections[gWorldID][gFocusID].courseID > 15 || hubSelections[gWorldID][gFocusID].courseID == 0) {
                     gLevelEntryConfirmationActive = 1;

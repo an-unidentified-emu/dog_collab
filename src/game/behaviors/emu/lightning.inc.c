@@ -12,7 +12,7 @@ void bhv_bowser_lightning_loop(void){
                 o->oPosX = gMarioState->pos[0];
                 o->oPosZ = gMarioState->pos[2];
             }
-            if (o->oTimer > 7){
+            if (o->oTimer > 6){
                 cur_obj_set_model(MODEL_LIGHTNING);
                 cur_obj_play_sound_1(SOUND_MOVING_SHOCKED);
                 f32 xDel = gMarioState->pos[0] - o->oPosX;
@@ -22,7 +22,7 @@ void bhv_bowser_lightning_loop(void){
                     interact_shock(gMarioState, INTERACT_SHOCK, o);
                 }
             }
-            if (o->oTimer > 15){
+            if (o->oTimer > 13){
                 obj_mark_for_deletion(o);
             }
         }
@@ -56,7 +56,7 @@ void bhv_bowser_lightning_loop(void){
                 o->oPosX = gMarioState->pos[0];
                 o->oPosZ = gMarioState->pos[2];
             }
-            if (o->oTimer > 12){
+            if (o->oTimer > 9){
                 cur_obj_set_model(MODEL_LIGHTNING);
                 cur_obj_play_sound_1(SOUND_MOVING_SHOCKED);
                 f32 xDel = gMarioState->pos[0] - o->oPosX;

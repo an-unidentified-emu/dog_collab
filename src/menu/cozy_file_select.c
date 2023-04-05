@@ -147,10 +147,10 @@ FileSelectMenu sOptionsMenu = MENU_OPTIONS(sOptionsOptions, "Options", &sMainMen
 
 enum MM_OPTS {
     MAIN_MENU_OPT_SAVE_A,
+    MAIN_MENU_OPT_SPEEDRUN,
+    MAIN_MENU_OPT_OPTIONS,
     MAIN_MENU_OPT_SAVE_B,
     MAIN_MENU_OPT_SAVE_C,
-    MAIN_MENU_OPT_OPTIONS,
-    MAIN_MENU_OPT_SPEEDRUN,
 };
 
 #define START_NEW_GAME_TEXT "Start new game"
@@ -169,11 +169,13 @@ FileSelectOption sMainMenuOptList[] = {
         .label = sMainMenuFile2Label,
         .onSelect = &on_select_game,
         .disabled = FALSE,
+        .overrideMenuType = TRUE
     },
     [MAIN_MENU_OPT_SAVE_C] = {
         .label = sMainMenuFile3Label,
         .onSelect = &on_select_game,
         .disabled = FALSE,
+        .overrideMenuType = TRUE
     },
     [MAIN_MENU_OPT_OPTIONS] = {
         .label = "Options",
@@ -516,6 +518,7 @@ s32 run_file_select(void) {
     if (sShowingKeyboard) {
         if (!gKeyboard) {
             sShowingKeyboard = FALSE;
+            if(FILE_SELECT_SELECTED_FILE != MAIN_MENU_OPT_SPEEDRUN)
             store_dog_string(sMainMenuOptList[FILE_SELECT_SELECTED_FILE].label, FILE_SELECT_SELECTED_FILE);
             gSaveFileModified = TRUE;
             save_file_do_save(FILE_SELECT_SELECTED_FILE);
@@ -570,7 +573,7 @@ void store_dog_string(char *dogString, u8 fileNum) {
     }
 }
 
-#define NUM_FILES_IN_HERE 3
+#define NUM_FILES_IN_HERE 1
 void init_file_select(void) {
     FileSelectMenuState *mState = &sMenuState;
     sCombinedSaveFlags = 0;
@@ -596,13 +599,12 @@ void init_file_select(void) {
         reset_best_time();
     }
 
-    if (sCombinedSaveFlags & SAVE_FLAG_BOWSER_3_BEAT || save_file_get_unlocked_speedrun_mode()) {
-        save_file_set_unlocked_speedrun_mode(TRUE);
+    if (save_file_get_unlocked_speedrun_mode()) {
         // setting the options to the actual number of options shows speedrun mode
         sMainMenu.numOptions = NUM_OPTIONS_MAIN_MENU;
     } else {
         // setting the options to one less hides speedrun mode
-        sMainMenu.numOptions = NUM_OPTIONS_MAIN_MENU - 1;
+        sMainMenu.numOptions = NUM_OPTIONS_MAIN_MENU - 2;
     }
 
     gSpeedrun.active = FALSE;

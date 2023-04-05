@@ -56,7 +56,7 @@ const LevelScript level_bowser_1_entry[] = {
 		OBJECT(MODEL_ASHPILE, -2568, 95, -2673, 0, 135, 0, (0 << 16), bhvAshpileEmu),
 		OBJECT(MODEL_ASHPILE, -2568, 95, 2464, 0, -135, 0, (0 << 16), bhvAshpileEmu),
 		OBJECT(MODEL_BOWSER, 0, 403, 649, 0, 0, 0, 0x13001850, bhvBowser),
-		OBJECT(MODEL_GODDARD_CAGE, 0, 568, 3356, 0, 0, 0, 0x00000000, bhvGoddardCage),
+		OBJECT(MODEL_DOG, 0, 568, 3356, 0, 0, 0, 0x00000000, bhvDogEmu),
 		OBJECT(MODEL_NONE, 0, -421, 0, 0, 0, 0, 0x00000000, bhvPaletteSwap),
 		OBJECT(MODEL_NONE, 0, 200, 0, 0, 0, 0, 0x000A0000, bhvSpinAirborneWarp),
 		MARIO_POS(0x01, 0, 0, 451, 0),
@@ -68,6 +68,7 @@ const LevelScript level_bowser_1_entry[] = {
         WARP_NODE(/*id*/ 0x0A, /*destLevel*/ LEVEL_BOWSER_1, /*destArea*/ 0x01, /*destNode*/ 0x0A, /*flags*/ WARP_NO_CHECKPOINT),
         WARP_NODE(/*id*/ 0xF0, /*destLevel*/ LEVEL_CASTLE, /*destArea*/ 0x01, /*destNode*/ 0x24, /*flags*/ WARP_NO_CHECKPOINT),
         WARP_NODE(/*id*/ 0xF1, /*destLevel*/ LEVEL_BITDW, /*destArea*/ 0x01, /*destNode*/ 0x0C, /*flags*/ WARP_NO_CHECKPOINT),
+		WARP_NODE(0x0B, LEVEL_ENDING, 0x01, 0x0A, WARP_NO_CHECKPOINT ),
 		/* Fast64 end persistent block [area commands] */
 	END_AREA(),
 

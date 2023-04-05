@@ -1556,21 +1556,26 @@ char *howString[] = {"H", "O", "W"};
 
 s32 ending_get_outta_here(void) {
     if(!gGlobalEndingHidden) {
-        print_text_fmt_int(85, 220, "%d OF 73 STARS", save_file_get_total_star_count(gCurrSaveFileNum - 1, COURSE_MIN - 1, COURSE_MAX - 1));
-        if(save_file_get_total_star_count(gCurrSaveFileNum - 1, COURSE_MIN - 1, COURSE_MAX - 1) == 73) {
+        print_text_fmt_int(85, 220, "%d OF 3 STARS", save_file_get_total_star_count(gCurrSaveFileNum - 1, COURSE_MIN - 1, COURSE_MAX - 1));
+        if(save_file_get_total_star_count(gCurrSaveFileNum - 1, COURSE_MIN - 1, COURSE_MAX - 1) == 3) {
             u8 i = 0;
             for(i = 0; i < 8; i++) {
                 print_text(100 + (i*16), 196 + (s32)(4.0f*sins(2000*(gGlobalTimer - i*8))), perfectString[i]);
             }
-        } else if(save_file_get_total_star_count(gCurrSaveFileNum - 1, COURSE_MIN - 1, COURSE_MAX - 1) > 73) {
+        } else if(save_file_get_total_star_count(gCurrSaveFileNum - 1, COURSE_MIN - 1, COURSE_MAX - 1) > 3) {
             u8 i = 0;
             for(i = 0; i < 3; i++) {
                 print_text(140 + (i*16), 196 + (s32)(4.0f*sins(2000*(gGlobalTimer - i*8))), howString[i]);
             }
         }
-        print_text_centered(170, 58, "PRESS A TO RESET");
+        if (gSpeedrun.active) {
+                        set_best_time(gSpeedrun.time);
+                    create_dialog_box(DIALOG_SPEEDRUN_ENDING);
+                    gSpeedrun.active = FALSE;
+                }
+        print_text_centered(170, 58, "PRESS R TO RESET");
         print_text_centered(170, 38, "B TO HIDE");
-        if(gPlayer1Controller->buttonPressed & A_BUTTON) {
+        if(gPlayer1Controller->buttonPressed & R_TRIG) {
             fade_into_special_warp(WARP_SPECIAL_MARIO_HEAD_REGULAR, 0);
             sWarpDest.type = WARP_TYPE_NOT_WARPING;
             gWorldID = -1;

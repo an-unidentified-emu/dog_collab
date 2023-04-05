@@ -2611,13 +2611,18 @@ means that if you slide\n\
 down and jump through the \n\
 @FF0000FFred panel@000000FF, you can\n\
 you can wallkick in a circle\n\
-inside the prism! But\n\
-be warned, this is a more \n\
-difficult trek than going\n\
-left from this sign. If you\n\
-choose to go straight, \n\
-the @00FF00FFgreen floors and walls\n\
-@000000FFshow recommended paths.")
+inside the prism! Unlike the\n\
+original Dog Collab,\n the left path\n\
+is more difficult that \nthe one \
+straight ahead, \nthe later of which\n\
+is relatively unchanged.\n\
+One more thing, the \n\
+red coin star spawns \n\
+2 stars, one at the original \n\
+spot and one at the end of\n\
+the level, both have unique\n\
+star ids. \n\
+")
 
 /**
  * params:

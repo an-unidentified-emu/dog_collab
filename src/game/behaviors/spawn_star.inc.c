@@ -54,8 +54,10 @@ void bhv_star_spawn_init(void) {
         cutscene_object(CUTSCENE_RED_COIN_STAR_SPAWN, o);
     }
 
+    if (o->oBehParams != 0x01000000){
     set_time_stop_flags(TIME_STOP_ENABLED | TIME_STOP_MARIO_AND_DOORS);
     o->activeFlags |= ACTIVE_FLAG_INITIATED_TIME_STOP;
+    }
     cur_obj_become_intangible();
 }
 
@@ -152,6 +154,8 @@ void spawn_red_coin_cutscene_star(f32 x, f32 y, f32 z) {
     struct Object *starObj = NULL;
     starObj = spawn_star(starObj, x, y, z);
     starObj->oBehParams2ndByte = SPAWN_STAR_ARC_CUTSCENE_BP_HIDDEN_STAR;
+    starObj->oInteractionSubtype |= INT_SUBTYPE_NO_EXIT;
+
 }
 
 void spawn_cutscene_star_get_outta_here(u32 bp, f32 x, f32 y, f32 z) {
@@ -194,7 +198,9 @@ void bhv_hidden_red_coin_star_loop(void) {
     switch (o->oAction) {
         case HIDDEN_STAR_ACT_INACTIVE:
             if (o->oHiddenStarTriggerCounter == 8) {
+                struct Object *otherStar = cur_obj_nearest_object_with_behavior(bhvBowserCourseRedCoinStar);
                 o->oAction = HIDDEN_STAR_ACT_ACTIVE;
+                otherStar->oAction = HIDDEN_STAR_ACT_ACTIVE;
             }
             break;
 

@@ -653,7 +653,7 @@ void general_star_dance_handler(struct MarioState *m, s32 isInWater) {
                         gEndResultMenuChoice = 0;
                         gEndResultMenuState = gSpeedrun.active ? 1 : 0;
                     } else { // you're in a bowser level: just exit course
-                        initiate_warp(EXIT_COURSE_LEVEL, EXIT_COURSE_AREA, EXIT_COURSE_NODE, WARP_FLAGS_NONE);
+                        //initiate_warp(EXIT_COURSE_LEVEL, EXIT_COURSE_AREA, EXIT_COURSE_NODE, WARP_FLAGS_NONE);
                         fade_into_special_warp(WARP_SPECIAL_NONE, 0);
                         gSavedCourseNum = COURSE_NONE;
                         gHubStarSelectTimer = 0;

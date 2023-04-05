@@ -97,7 +97,7 @@ s8 sBowserRainbowLight[] = { FALSE, FALSE, TRUE };
 /**
  * Set how much health Bowser has on each stage
  */
-s8 sBowserHealth[] = { 1, 4, 3 };
+s8 sBowserHealth[] = { 1, 3, 3 };
 /**
  * Checks whenever the Bowser and his tail should be intangible or not
  * By default it starts tangible
@@ -440,7 +440,7 @@ void bowser_bitdw_actions(void) {
     if (o->oBowserIsReacting == FALSE) {
         if (o->oBowserStatus & BOWSER_STATUS_ANGLE_MARIO) {
             if (o->oDistanceToMario < 1500.0f) {
-                o->oAction = BOWSER_ACT_HOMING_ORB; // nearby
+                o->oAction = BOWSER_ACT_HOMING_ORB;// nearby
             } else {
                 o->oAction = BOWSER_ACT_QUICK_JUMP; // far away
             }
@@ -1126,8 +1126,6 @@ void bowser_act_hit_mine(void) {
             // Makes Bowser dance at one health (in BITS)
             if (o->oHealth == 1) {
                 o->oAction = BOWSER_ACT_DANCE;
-            } else if (o->oHealth == 3) {
-                o->oAction = BOWSER_ACT_MID_DIALOG;
             } else {
                 o->oAction = BOWSER_ACT_DEFAULT;
             }
@@ -1278,15 +1276,15 @@ void bowser_act_sky_attack(void){
     o->oPosY = 500.0f;
     cur_obj_play_sound_2(SOUND_OBJ2_BOWSER_ROAR);
     struct Object *wave;
-    if(o->oTimer%60 == 1){
+    if(o->oTimer%45 == 1){
     wave = spawn_object(o, MODEL_EMU_LASER_RING, bhvLaserRing);
         wave->oPosY = o->oFloorHeight+5.0f;
     spawn_object_relative(
             /* behParam */ 0x00, /* pos */ 0, 120, 0,
             /* parent */ o, /* model */ MODEL_EMU_LASER_RING, bhvLaserRing);
-    //spawn_object_relative(
-     //       /* behParam */ 0x00, /* pos */ 0, -35, 0,
-      //      /* parent */ o, /* model */ MODEL_EMU_LASER_RING, bhvLaserRing);
+    spawn_object_relative(
+           /* behParam */ 0x00, /* pos */ 0, -40, 0,
+           /* parent */ o, /* model */ MODEL_EMU_LASER_RING, bhvLaserRing);
     }
     if (o->oTimer%20 == 1){
      bowser_spawn_lightning();   
@@ -1382,7 +1380,7 @@ void bowser_act_spit_fire_onto_floor(void) {
 void bowser_act_propane_shooter(void) {
     //mostly stolen from Rovert
     struct Object *obj;
-    o->oFaceAngleYaw += 0x400;
+    o->oFaceAngleYaw += 0x650;
     o->oMoveAngleYaw = o->oFaceAngleYaw;
     if (o->oDistanceToMario < 8000.0f) {
         cur_obj_play_sound_1(SOUND_AIR_BOWSER_SPIT_FIRE);
@@ -1394,9 +1392,9 @@ void bowser_act_propane_shooter(void) {
             obj = spawn_object(o,MODEL_BLUE_FLAME,bhvPropane);
             obj->oMoveAngleYaw = o->oFaceAngleYaw+0x7FFF;
             obj->oPosY += 90.0f;
-            //spawn_object_relative(1, 0, 0x190, 0x64, o, MODEL_RED_FLAME, bhvBlueBowserFlame);
-            //spawn_object_relative(1, 0x64, 0x190, 0x64, o, MODEL_RED_FLAME, bhvBlueBowserFlame);
-            //spawn_object_relative(1, 0x64, 0x190, 0, o, MODEL_RED_FLAME, bhvBlueBowserFlame);
+            spawn_object_relative(1, 0, 0x190, 0x64, o, MODEL_RED_FLAME, bhvBlueBowserFlame);
+            spawn_object_relative(1, 0x64, 0x190, 0x64, o, MODEL_RED_FLAME, bhvBlueBowserFlame);
+            spawn_object_relative(1, 0x64, 0x190, 0, o, MODEL_RED_FLAME, bhvBlueBowserFlame);
             
         }
         } else {
@@ -1417,6 +1415,9 @@ void bowser_act_propane_shooter(void) {
     }
     if (o->oTimer > 600){
         o->oAction = BOWSER_ACT_DEFAULT;
+    }
+    if (o->oTimer%20 == 1){
+     bowser_spawn_lightning();   
     }
 }
 /**
@@ -1539,13 +1540,13 @@ s32 bowser_check_hit_mine(void) {
         mine = cur_obj_find_nearest_object_with_behavior(bhvGoddardCage, &dist);
         if (mine != NULL && dist < 800.0f && o->oAction == BOWSER_ACT_THROWN) {
             mine->oInteractStatus |= INT_STATUS_HIT_MINE;
-            spawn_object(o,MODEL_NONE,bhvThreeCoinsSpawn);
+            //spawn_object(o,MODEL_NONE,bhvThreeCoinsSpawn);
             return TRUE;
         } else {
             mine = cur_obj_find_nearest_object_with_behavior(bhvEmuBomb, &dist);
             if (mine != NULL && dist < 800.0f) {
                 mine->oInteractStatus |= INT_STATUS_HIT_MINE;
-                spawn_object(o,MODEL_NONE,bhvThreeCoinsSpawn);
+                //spawn_object(o,MODEL_NONE,bhvThreeCoinsSpawn);
                 return TRUE;
             }
         }
@@ -1732,22 +1733,7 @@ void bowser_act_mid_dialog(void) {
  * Spawns a Key in BITDW/BITFS or Grand Star in BITS
  */
 void bowser_spawn_collectable(void) {
-    if (gCurrLevelNum == LEVEL_BOWSER_3) {
-       //gSecondCameraFocus = spawn_object(o, MODEL_STAR, bhvGrandStar);
-       gSecondCameraFocus = spawn_object(o, MODEL_PEACH, bhvPeachEnding);
-       gSecondCameraFocus->oHomeY = 0.0f;
-       gSecondCameraFocus->oOpacity = 0.0f;
-       vec3f_set(&gSecondCameraFocus->oPosX, 0.0f, 0.0f, 0.0f);
-       cur_obj_play_sound_2(SOUND_GENERAL2_BOWSER_KEY);
-       gEndingCutsceneState = 0;
-       gCamera->cutscene = CUTSCENE_REAL_ENDING;
-       gSecondCameraFocus->oMoveAngleYaw = gSecondCameraFocus->oFaceAngleYaw = 0xC000;
-       if(find_any_object_with_behavior(bhvChainChompBowser)) {obj_mark_for_deletion(find_any_object_with_behavior(bhvChainChompBowser));}
-        obj_mark_for_deletion(o);
-    } else {
-        gSecondCameraFocus = spawn_object(o, MODEL_BOWSER_KEY, bhvBowserKey);
-        cur_obj_play_sound_2(SOUND_GENERAL2_BOWSER_KEY);
-    }
+    gSecondCameraFocus = spawn_object_relative(0, 0x00, -0x200, 0x00, o, MODEL_STAR, bhvGrandStar);
     gSecondCameraFocus->oAngleVelYaw = o->oAngleVelYaw;
 }
 
@@ -2315,6 +2301,7 @@ void bhv_bowser_loop(void) {
     angleToCenter = abs_angle_diff(o->oMoveAngleYaw, o->oBowserAngleToCenter);
     // Reset Status
     o->oBowserStatus &= ~0xFF;
+    o->oAction = BOWSER_ACT_DEAD;
     if (cur_obj_nearest_object_with_behavior(bhvGoddardCage) == NULL && mine != NULL && (mine->oAction == EMU_BOMB_ACT_LAUNCHED || mine->oAction == EMU_BOMB_ACT_EXPLODE)) {
         if (bowser_check_hit_mine()) {
             o->oHealth--;

@@ -217,8 +217,7 @@ if (gCurrLevelNum == LEVEL_BOWSER_1){
             sussy = cur_obj_nearest_object_with_behavior(bhvDogEmu); 
             o->parentObj = sussy;
             if((gPlayer1Controller->buttonPressed & Z_TRIG) && (o->oDistanceToMario < 400) && (o->parentObj->oAction == EMU_DOG_RUN_AROUND || o->parentObj->oAction == EMU_DOG_RANDOM_LOCATION)){ //checks requirements for player and dog
-            if (bowser != NULL && (bowser->oAction == BOWSER_ACT_LIGHTNING || bowser->oAction == BOWSER_ACT_PROPANE_SHOOTER || bowser->oAction == BOWSER_ACT_SKY_ATTACK || bowser->oAction == BOWSER_ACT_LIGHTNING_2 || bowser->oAction == BOWSER_ACT_MID_DIALOG \
-            || (bowser->oAction == BOWSER_ACT_HIT_MINE && bowser->oSubAction == BOWSER_SUB_ACT_HIT_MINE_STOP))) //checks requirements for bowser
+            if (bowser != NULL && (bowser->oAction == BOWSER_ACT_LIGHTNING || bowser->oAction == BOWSER_ACT_PROPANE_SHOOTER || bowser->oAction == BOWSER_ACT_SKY_ATTACK || bowser->oAction == BOWSER_ACT_LIGHTNING_2)) //checks requirements for bowser
             {}else {
                 play_sound(SOUND_GENERAL2_RIGHT_ANSWER, gGlobalSoundSource);
                 o->parentObj->oAction = SET_ASHPILE_TARGET;
@@ -248,7 +247,7 @@ if (gCurrLevelNum == LEVEL_BOWSER_1){
             o->parentObj->oAction = EMU_DOG_RANDOM_LOCATION;
             if (mine == NULL) {
                 spawn_object(o, MODEL_BOWSER_BOMB, bhvEmuBomb);
-                spawn_object(o,MODEL_NONE,bhvThreeCoinsSpawn);
+                //spawn_object(o,MODEL_NONE,bhvThreeCoinsSpawn);
             } else spawn_object(o,MODEL_NONE,bhvThreeCoinsSpawn);
             o->oInteractStatus = 0;
             o->header.gfx.node.flags |= GRAPH_RENDER_INVISIBLE;

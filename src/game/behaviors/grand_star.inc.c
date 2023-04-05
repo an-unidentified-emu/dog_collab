@@ -71,6 +71,14 @@ void bhv_grand_star_loop(void) {
         cur_obj_become_tangible();
 
         if (o->oInteractStatus & INT_STATUS_INTERACTED) {
+            if (gSpeedrun.active) {
+                    if (gSpeedrun.enabled) {
+                        gSpeedrun.enabled = FALSE; // stop timer
+                        set_best_time(gSpeedrun.time);
+                    }
+            }
+            o->oBehParams = 0x03000000;
+            warp_special(WARP_SPECIAL_ENDING);
             obj_mark_for_deletion(o);
             o->oInteractStatus = INT_STATUS_NONE;
         }

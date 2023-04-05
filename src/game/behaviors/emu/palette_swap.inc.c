@@ -29,7 +29,17 @@ u8 indices[] = {
     COLOR_INDEX(10),
     COLOR_INDEX(11),
 };
-
+void palette_swap_init(void){
+    if( gMarioState->pos[0] == 0.0 &&
+        gMarioState->pos[1] == 0.0 &&
+        gMarioState->pos[2] == 0.0 ){
+    set_mario_action(gMarioState, ACT_FREEFALL, 0);
+    gMarioState->pos[0] = 9566;
+    gMarioState->pos[1] = -8006;
+    gMarioState->pos[2] = 8940;
+        }
+        if (gSpeedrun.active) gSpeedrun.enabled = TRUE;
+}
 void palette_swap(void){
     if (gCurrLevelNum == LEVEL_BITDW){
         if (o->oTimer == 0) {

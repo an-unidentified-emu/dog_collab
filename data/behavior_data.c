@@ -7720,6 +7720,7 @@ const BehaviorScript bhvSphere[] = {
 };
 
 const BehaviorScript bhvPaletteSwap[] = {
+    CALL_NATIVE(palette_swap_init),
     BEGIN_LOOP(),
     CALL_NATIVE(palette_swap),
     END_LOOP(),
