@@ -1418,21 +1418,7 @@ DEFINE_DIALOG(DIALOG_119, 1, 6, 30, 200, "\
 GG")
 
 DEFINE_DIALOG(DIALOG_120, 1, 4, 30, 200, "\
-Ooowaah! Can it be that\n\
-I've lost??? The power of\n\
-the Stars has failed me...\n\
-this time.\n\
-Consider this a draw.\n\ 
-Next time, I'll be in\n\
-perfect condition.\n\
-\n\
-Now, if you want to see\n\
-your precious Princess,\n\
-collect even more stars,\n\
-then find me at the pound.\n\
-Me and my chain chomp\n\
-will be waiting!\n\
-Gwa ha ha ha!")
+GG")
 
 DEFINE_DIALOG(DIALOG_121, 1, 6, 30, 200, "\
 Nooo! It can't be!\n\

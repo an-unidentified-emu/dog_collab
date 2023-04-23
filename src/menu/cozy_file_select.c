@@ -168,13 +168,13 @@ FileSelectOption sMainMenuOptList[] = {
     [MAIN_MENU_OPT_SAVE_B] = {
         .label = sMainMenuFile2Label,
         .onSelect = &on_select_game,
-        .disabled = FALSE,
+        .disabled = TRUE,
         .overrideMenuType = TRUE
     },
     [MAIN_MENU_OPT_SAVE_C] = {
         .label = sMainMenuFile3Label,
         .onSelect = &on_select_game,
-        .disabled = FALSE,
+        .disabled = TRUE,
         .overrideMenuType = TRUE
     },
     [MAIN_MENU_OPT_OPTIONS] = {

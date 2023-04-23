@@ -1259,7 +1259,7 @@ void format_speedrun_dialog_str(struct DialogEntry *dialog) {
     }
     
     s32 isPB = gSpeedrun.time < gSpeedrun.prevTime; // indexes some format strings
-    s32 is100 = save_file_get_total_star_count(gCurrSaveFileNum - 1, COURSE_MIN - 1, COURSE_MAX - 1) == 73;
+    s32 is100 = save_file_get_total_star_count(gCurrSaveFileNum - 1, COURSE_MIN - 1, COURSE_MAX - 1) == 3;
     s32 firstRun = gSpeedrun.prevTime == MAX_RUN_TIME;
 
     // format current time

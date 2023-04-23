@@ -87,7 +87,7 @@ else ifeq ($(VERSION),sh)
   DEFINES += VERSION_SH=1
 endif
 
-TARGET := dogcollab
+TARGET := KAIZO_BRR
 DEBUG_MAP_STACKTRACE_FLAG := -D DEBUG_MAP_STACKTRACE
 
 
@@ -223,7 +223,7 @@ ifeq ($(NON_MATCHING),1)
 endif
 
 
-TARGET_STRING := dogcollab
+TARGET_STRING := BKRR
 
 LOADER_FLAGS =
 

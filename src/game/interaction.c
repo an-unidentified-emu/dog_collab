@@ -1978,6 +1978,9 @@ void mario_process_interactions(struct MarioState *m) {
 
 void check_death_barrier(struct MarioState *m) {
     if (m->pos[1] < m->floorHeight + 2048.0f) {
+        if(gCurrLevelNum == LEVEL_BITDW){
+            gSpeedrun.time = 0;
+        }
         if (level_trigger_warp(m, WARP_OP_WARP_FLOOR) == 20 && !(m->flags & MARIO_FALL_SOUND_PLAYED)) {
             play_sound(SOUND_MARIO_WAAAOOOW, m->marioObj->header.gfx.cameraToObject);
         }
@@ -1987,6 +1990,9 @@ void check_death_barrier(struct MarioState *m) {
 void check_death_barrier_with_height(struct MarioState *m) {
     f32 aboveFloorHeight = (f32)m->floor->force;
     if (m->pos[1] <= m->floorHeight + aboveFloorHeight) {
+        if(gCurrLevelNum == LEVEL_BITDW){
+            gSpeedrun.time = 0;
+        }
         if (level_trigger_warp(m, WARP_OP_WARP_FLOOR) == 20 && !(m->flags & MARIO_FALL_SOUND_PLAYED)) {
             play_sound(SOUND_MARIO_WAAAOOOW, m->marioObj->header.gfx.cameraToObject);
         }

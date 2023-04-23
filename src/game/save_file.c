@@ -547,15 +547,24 @@ void save_file_collect_star_or_key(s16 coinScore, s16 starIndex) {
             if (!(save_file_get_flags() & (SAVE_FLAG_HAVE_KEY_1 | SAVE_FLAG_UNLOCKED_BASEMENT_DOOR))) {
                 save_file_set_flags(SAVE_FLAG_HAVE_KEY_1);
             }
+            if (!(save_file_get_star_flags(fileIndex, courseIndex) & starFlag)) {
+                save_file_set_star_flags(fileIndex, courseIndex, starFlag);
+            }
             break;
 
         case LEVEL_BOWSER_2:
             if (!(save_file_get_flags() & (SAVE_FLAG_HAVE_KEY_2 | SAVE_FLAG_UNLOCKED_UPSTAIRS_DOOR))) {
                 save_file_set_flags(SAVE_FLAG_HAVE_KEY_2);
             }
+            if (!(save_file_get_star_flags(fileIndex, courseIndex) & starFlag)) {
+                save_file_set_star_flags(fileIndex, courseIndex, starFlag);
+            }
             break;
 
         case LEVEL_BOWSER_3:
+        if (!(save_file_get_star_flags(fileIndex, courseIndex) & starFlag)) {
+                save_file_set_star_flags(fileIndex, courseIndex, starFlag);
+            }
             break;
 
         default:
@@ -564,8 +573,8 @@ void save_file_collect_star_or_key(s16 coinScore, s16 starIndex) {
                 save_file_set_star_flags(fileIndex, starByte, starFlag);
             }
 #else
-            if (!(save_file_get_star_flags(fileIndex, courseIndex) & starFlag)) {
-                save_file_set_star_flags(fileIndex, courseIndex, starFlag);
+            if (!(save_file_get_star_flags(fileIndex, courseIndex-5) & starFlag)) {
+                save_file_set_star_flags(fileIndex, courseIndex-5, starFlag);
             }
 #endif
             break;

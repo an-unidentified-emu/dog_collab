@@ -63,7 +63,7 @@ enum SaveFileIndex {
     SAVE_FILE_B,
     SAVE_FILE_C,
     SAVE_FILE_D,
-    SAVE_FILE_SPEEDRUN = SAVE_FILE_D
+    SAVE_FILE_SPEEDRUN = SAVE_FILE_B
 };
 
 struct MainMenuSaveData {

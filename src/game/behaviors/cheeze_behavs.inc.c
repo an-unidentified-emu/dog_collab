@@ -699,7 +699,7 @@ void bhv_flipswitch_loop(void) {
 }
 
 void bhv_golden_goddard_loop(void) {
-    if ((save_file_get_total_star_count(gCurrSaveFileNum - 1, COURSE_MIN - 1, COURSE_MAX - 1) >= 73) && (save_file_get_flags() & SAVE_FLAG_BOWSER_3_BEAT)) {
+    if ((save_file_get_total_star_count(gCurrSaveFileNum - 1, COURSE_MIN - 1, COURSE_MAX - 1) >= 3)) {
         if((gGlobalTimer % 3) == 0) {
             bhv_golden_coin_sparkles_loop();
         }

@@ -81,7 +81,7 @@ const LevelScript level_bitdw_entry[] = {
 		OBJECT(MODEL_RED_COIN, 9420, -5534, 9033, 0, 0, 0, 0x00000000, bhvRedCoin),
 		OBJECT(MODEL_RED_COIN, 10312, -708, 8585, 0, 0, 0, 0x00000000, bhvRedCoin),
 		OBJECT(0x00, 8474, -773, 6268, 0, 0, 0, 0x00000000, bhvBowserCourseRedCoinStar),
-		OBJECT(0x00, -7066, 2638, -10663, 0, 0, 0, (0x01 << 24), bhvHiddenRedCoinStar),
+		OBJECT(0x00, 6967, 2252, -10119, 0, 0, 0, (0x01 << 24), bhvHiddenRedCoinStar),
 		OBJECT(MODEL_YELLOW_COIN_NO_SHADOW, 6056, -1357, 6427, 0, 0, 0, 0x00000000, bhvYellowCoin),
 		OBJECT(MODEL_YELLOW_COIN, 3710, 370, 5772, 0, 0, 0, 0x00000000, bhvYellowCoin),
 		OBJECT(MODEL_YELLOW_COIN, 4191, 88, 6031, 0, 0, 0, 0x00000000, bhvYellowCoin),
